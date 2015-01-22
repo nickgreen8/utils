@@ -1,6 +1,8 @@
 <?php
 namespace N8G\Utils;
 
+use N8G\Utils\Exceptions\UnableToOpenFileException;
+
 /**
  * This function acts as a logging mechinism. This can be used in many situations
  * and on different sites. This is a static class and can be called from anywhere.
