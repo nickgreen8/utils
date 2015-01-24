@@ -56,7 +56,7 @@ class Config
 	{
 		Log::info(sprintf('Getting Config[\'%s\']', $name));
 		//Check data is stored
-		if (isset($name)) {
+		if (isset(self::$data[$name])) {
 			//Return the data
 			return self::$data[$name];
 		}
