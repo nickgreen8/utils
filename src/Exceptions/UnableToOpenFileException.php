@@ -1,7 +1,5 @@
 <?php
-namespace N8G\Cms\Exceptions\Components;
-
-use N8G\Cms\Exceptions\ExceptionAbstract;
+namespace N8G\Utils\Exceptions;
 
 /**
  * This exception is thown when a file cannot be created.
