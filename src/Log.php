@@ -141,36 +141,28 @@ class Log
 	{
 		switch ($cat) {
 			case self::FATAL :
-				// $colour = '0;31';
-				$category = 'FATAL  ';
+				$category = "\033[1;37m\033[41m FATAL ";
 				break;
 			case self::ERROR :
-				// $colour = '1;33';
-				$category = 'ERROR  ';
+				$category = "\033[1;31m\033[1mERROR  ";
 				break;
 			case self::WARN :
-				// $colour = '0;35';
-				$category = 'WARNING';
+				$category = "\033[0;33m\033[1mWARNING";
 				break;
 			case self::NOTICE :
-				// $colour = '0;36';
-				$category = 'NOTICE ';
+				$category = "\033[0;36m\033[1mNOTICE ";
 				break;
 			case self::INFO :
-				// $colour = '0;34';
-				$category = 'INFO   ';
+				$category = "\033[0;34m\033[1mINFO   ";
 				break;
 			case self::DEBUG :
-				// $colour = '0;32';
-				$category = 'DEBUG  ';
+				$category = "\033[0;37m\033[1mDEBUG  ";
 				break;
 			case self::SUCCESS :
-				// $colour = '0;32';
-				$category = 'SUCCESS';
+				$category = "\033[0;32m\033[1mSUCCESS";
 				break;
 		}
-		// return sprintf("\033[%sm %s \033[0m ", $colour, $category);
-		return $category;
+		return $category . "\033[0m";
 	}
 
 	/**
