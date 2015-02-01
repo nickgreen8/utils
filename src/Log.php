@@ -12,6 +12,7 @@ use N8G\Utils\Exceptions\UnableToOpenFileException;
 class Log
 {
 	//Log categoies
+	const CUSTOM  = -1;
 	const FATAL   = 0;
 	const ERROR   = 1;
 	const WARN    = 2;
@@ -120,13 +121,17 @@ class Log
 		//check if the class has been initiated
 		self::init();
 
-		$message = sprintf(
-			'{%s} %s - %s%s',
-			date('d\/m\/Y H:i:s'),
-			self::getCategory($cat),
-			$msg,
-			PHP_EOL
-		);
+		if ($cat !== self::CUSTOM) {
+			$message = sprintf(
+				'{%s} %s - %s%s',
+				date('d\/m\/Y H:i:s'),
+				self::getCategory($cat),
+				$msg,
+				PHP_EOL
+			);
+		} else {
+			$message = sprintf('%s%s', $msg, PHP_EOL);
+		}
 		fwrite(self::$file, $message);
 	}
 
@@ -240,5 +245,16 @@ class Log
 	public static function success($msg)
 	{
 		self::writeToFile(self::SUCCESS, $msg);
+	}
+
+	/**
+	 * This method is used to log a custom message.
+	 *
+	 * @param  string $msg The message to be logged
+	 * @return void
+	 */
+	public static function custom($msg)
+	{
+		self::writeToFile(self::CUSTOM, $msg);
 	}
 }
