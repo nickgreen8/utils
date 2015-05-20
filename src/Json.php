@@ -1,7 +1,7 @@
 <?php
 namespace N8G\Utils;
 
-use N8G\Utils\Exceptions\UnableToOpenFileException;
+use N8G\Utils\Exceptions\JsonException;
 
 /**
  * This class contains methods that are used to manipulate json files. All the
@@ -60,12 +60,12 @@ class Json
 		//Get the data from the file
 		try {
 			if (false === $content = fopen($file, "r")) {
-				throw new UnableToOpenFileException('Could not open config file!');
+				throw new JsonException('Could not open config file!');
 			}
 
 			$json = fread($content, filesize($file));
 			fclose($content);
-		} catch (UnableToOpenFileException $e) {
+		} catch (JsonException $e) {
 			return;
 		}
 
@@ -89,10 +89,10 @@ class Json
 		try {
 			//Check the files exists
 			if (false === $file = fopen($file, 'w')) {
-				throw new UnableToOpenFileException('Could not open file');
+				throw new JsonException('Could not open file');
 			}
 			Log::success('File opened');
-		} catch (UnableToOpenFileException $e) {
+		} catch (JsonException $e) {
 			return;
 		}
 

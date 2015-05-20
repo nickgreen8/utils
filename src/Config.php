@@ -1,6 +1,8 @@
 <?php
 namespace N8G\Utils;
 
+use N8G\Utils\Exceptions\ConfigException;
+
 /**
  * This class acts as a central storage for all config data. This can be used in many
  * situations and on different sites. This is a static class and can be called from
@@ -88,5 +90,47 @@ class Config
 	public static function clear()
 	{
 		self::$data = array();
-	}	
+	}
+
+	/**
+	 * This functions is used to set and get any data in config.
+	 *
+	 * @param  string $method The method that was called.
+	 * @param  array  $args   An array of the arguments that were passed to the function.
+	 * @return mixed          The item in config or void.
+	 */
+	public static function __callStatic($method, $args)
+	{
+		Log::notice(sprintf('Config function called: %s', $method));
+
+		//Calculate the key
+		$name = preg_replace("/^(get|set)/", '', $method);
+		$key = '';
+		for ($i = 0; $i < strlen($name); $i++) {
+			if (preg_match("/[A-Z]/", $name[$i]) && strlen($key) > 1) {
+				$key .= '-';
+			}
+			//Concatinate to key
+			$key .= strtolower($name[$i]);
+		}
+		//Check if it is a get method
+		if (preg_match("/^get/", $method)) {
+			//Return data requested
+			if (self::inConfig($key)) {
+				return self::$data[$key];
+			}
+			throw new ConfigException('Data item not found.');
+		}
+
+		//Check if it is a set method
+		if (preg_match("/^set/", $method)) {
+			//Set config value
+			self::$data[$key] = $args[0];
+			//Return so stop function
+			return;
+		}
+
+		//Throw exception by default
+		throw new ConfigException('Invalid function called.');
+	}
 }

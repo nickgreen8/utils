@@ -2,11 +2,11 @@
 namespace N8G\Utils\Exceptions;
 
 /**
- * This exception is thown when a file cannot be created.
+ * This exception is thown if there is an issue in the Json class.
  *
  * @author Nick Green <nick-green@live.co.uk>
  */
-class UnableToOpenFileException extends ExceptionAbstract
+class JsonException extends ExceptionAbstract
 {
 	/**
 	 * Default custom exception constructor

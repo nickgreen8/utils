@@ -1,7 +1,7 @@
 <?php
 namespace N8G\Utils;
 
-use N8G\Utils\Exceptions\UnableToOpenFileException;
+use N8G\Utils\Exceptions\LogException;
 
 /**
  * This function acts as a logging mechinism. This can be used in many situations
@@ -102,10 +102,10 @@ class Log
 		try {
 			//Check the files exists
 			if (false === self::$file = fopen($directory . $filename, 'a')) {
-				throw new UnableToOpenFileException('Could not create log file!');
+				throw new LogException('Could not create log file!');
 			}
 			return self::$file;
-		} catch (UnableToOpenFileException $e) {}
+		} catch (LogException $e) {}
 	}
 
 	/**
