@@ -12,6 +12,9 @@
 	"require": {
 		"php": ">=5.4.0"
 	},
+	"require-dev": {
+		"phpunit/phpunit": "4.4.*"
+	},
 	"autoload": {
 		"psr-4": {
 			"N8G\\Utils\\": "src/"
