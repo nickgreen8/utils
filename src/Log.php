@@ -48,7 +48,7 @@ class Log
 	private function __construct($directory, $filename)
 	{
 		//set the name of the file
-		self::$file = $this->getFile($directory, $filename);
+		self::$file = $this->createFile($directory, $filename);
 	}
 
 	/**
@@ -67,15 +67,23 @@ class Log
 	 *
 	 * @param  string $directory The folder to hold the log file
 	 * @param  string $filename  The name of the log file
-	 * @return void
+	 * @return object            The instance of this class
 	 */
-	public static function init($directory = 'logs/', $filename = NULL)
+	public static function init($directory = 'logs/', $filename = null)
 	{
-		$directory = $directory;
+		if (substr($directory, -1, 1) !== '/') $directory = $directory . '/';
 		//Check for instance of the class
 		if (self::$instance === null) {
 			self::$instance = new self($directory, $filename);
 		}
+
+		//Check that the file has been created
+		if (self::$file === null) {
+			self::$file = self::createFile($directory, $filename);
+		}
+
+		//Return the instance of the class
+		return self::$instance;
 	}
 
 	/**
@@ -87,7 +95,7 @@ class Log
 	 * @param  string $filename  The name of the file
 	 * @return void
 	 */
-	private static function getFile($directory, $filename)
+	private static function createFile($directory, $filename)
 	{
 		//Create file name if there is none
 		if ($filename === NULL) {
@@ -96,16 +104,26 @@ class Log
 
 		//Check the director exists
 		if (!is_dir($directory)) {
-			mkdir($directory, 0777, true);
+			if (!mkdir($directory, 0777, true)) {
+				//If there is an error, throw exception
+				throw new LogException('Log file not created');
+			}
 		}
 
-		try {
-			//Check the files exists
-			if (false === self::$file = fopen($directory . $filename, 'a')) {
-				throw new LogException('Could not create log file!');
+		//Check the directory is writeable
+		if (!is_writeable($directory)) {
+			//Change the directory perms
+			if (chmod($directory, 0777, true)) {
+				//If there is an error, throw exception
+				throw new LogException('The directoy is not writeable');
 			}
-			return self::$file;
-		} catch (LogException $e) {}
+		}
+
+		//Check the files exists
+		if (false === self::$file = fopen($directory . $filename, 'a')) {
+			throw new LogException('Could not create log file!');
+		}
+		return self::$file;
 	}
 
 	/**
@@ -120,6 +138,15 @@ class Log
 	{
 		//check if the class has been initiated
 		self::init();
+
+		//Format message
+		if (is_bool($msg) && $msg === true) {
+			$msg = 'true';
+		} elseif (is_bool($msg) && $msg === false) {
+			$msg = 'false';
+		} elseif ($msg === null) {
+			$msg = 'null';
+		}
 
 		if ($cat !== self::CUSTOM) {
 			$message = sprintf(
@@ -256,5 +283,32 @@ class Log
 	public static function custom($msg)
 	{
 		self::writeToFile(self::CUSTOM, $msg);
+	}
+
+	/**
+	 * Resets the log file ready for a new file to be created
+	 *
+	 * @return void
+	 */
+	public static function reset()
+	{
+		//Close the file
+		if (self::$file !== null) {
+			fclose(self::$file);
+		}
+		//Reset the file property
+		self::$file = null;
+	}
+
+	// Getters
+
+	/**
+	 * Gets the value of the file property and returns it.
+	 *
+	 * @return pointer|null The value of the file property
+	 */
+	public function getFile()
+	{
+		return self::$file;
 	}
 }

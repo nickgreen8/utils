@@ -1,10 +1,12 @@
 <?php
-namespace Tests;
+namespace N8G\Utils\Tests;
 
 use N8G\Utils\Validation;
 
 class ValidationTest extends \PHPUnit_Framework_TestCase
 {
+	// Tests
+
 	/**
 	 * This function is used to determine whether e-mail addresses are validated correctly. Instead
 	 * of using multipul data providers, only one is used to check both valid and invalid e-mails.

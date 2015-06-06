@@ -17,7 +17,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"N8G\\Utils\\": "src/"
+			"N8G\\Utils\\": "src/",
+			"N8G\\Utils\\Tests\\": "tests/src/"
 		}
 	}
 }
