@@ -18,8 +18,6 @@ class LogTest extends \PHPUnit_Framework_TestCase
      */
     public static function tearDownAfterClass()
     {
-        exec('[ -d "logs/" ] && rm -r logs/');
-        exec('count="ls -lR tests/fixtures/*.log | wc -l"; [ "$count" > 0 ] && rm tests/fixtures/*.log;');
 		exec('[ -d "tests/fixtures/logs/" ] && rm -r tests/fixtures/logs/');
     }
 
@@ -38,15 +36,17 @@ class LogTest extends \PHPUnit_Framework_TestCase
 		Log::init();
 		//Check the file is created
 		$this->assertFileExists(sprintf('logs/%s.log', date('Y-m-d')));
-		//Reset the log
+		//Reset the log and clean up
 		Log::reset();
+        exec('rm -r logs/');
 
 		//Init with an existing directory
 		Log::init('tests/fixtures/');
 		//Check the file is created
 		$this->assertFileExists(sprintf('tests/fixtures/%s.log', date('Y-m-d')));
-		//Reset the log
+		//Reset the log and clean up
 		Log::reset();
+        exec('rm tests/fixtures/*.log');
 
 		//Init with a new directory
 		Log::init('tests/fixtures/logs/');
@@ -56,9 +56,9 @@ class LogTest extends \PHPUnit_Framework_TestCase
 		Log::reset();
 
 		//Init with directory with no slash
-		Log::init('tests/fixtures/logs', 'utils.log');
+		Log::init('tests/fixtures/logs', 'test.log');
 		//Check the file is created
-		$this->assertFileExists('tests/fixtures/logs/utils.log');
+		$this->assertFileExists('tests/fixtures/logs/test.log');
 		//Reset the log
 		Log::reset();
 
