@@ -13,10 +13,16 @@ use N8G\Utils\Exceptions\ConfigException;
 class Config
 {
 	/**
+	 * Instance of this class
+	 * @var object
+	 */
+	private static $instance;
+
+	/**
 	 * Array of data to be used as the data store
 	 * @var array
 	 */
-	private static $data = array();
+	private static $data;
 
 	/**
 	 * This function is used to initilised the config object. The data is retreved
@@ -28,6 +34,17 @@ class Config
 	public static function init()
 	{
 		Log::info('Initilising config class');
+
+		//Check for instance of the class
+		if (self::$instance === null) {
+			self::$instance = new self();
+		}
+
+		//Create data array
+		self::$data = array();
+
+		//Return the instance of the class
+		return self::$instance;
 	}
 
 	/**
@@ -60,7 +77,7 @@ class Config
 			//Return the data
 			return self::$data[$name];
 		}
-		return NULL;
+		throw new ConfigException('Data item not found.');
 	}
 
 	/**
@@ -132,5 +149,29 @@ class Config
 
 		//Throw exception by default
 		throw new ConfigException('Invalid function called.');
+	}
+
+	// Non-static functions
+
+	/**
+	 * Returns the value of the data array.
+	 *
+	 * @return Array The array of config data
+	 */
+	public function getData()
+	{
+		//Return the data array
+		return self::$data;
+	}
+
+	/**
+	 * Returns the size of the data array.
+	 *
+	 * @return Integer The size of the data array
+	 */
+	public function size()
+	{
+		//Return the size of the data array
+		return count(self::$data);
 	}
 }
