@@ -48,26 +48,22 @@ class Json
 
 		//Check for file
 		if (!self::fileExists($file)) {
-			return;
+			throw new JsonException('The file specifed cannot be found.');
 		}
 
 		//Check the size of the file
 		if (filesize($file) < 1) {
 			Log::error('The file size suggests the file is empty');
-			return;
+			throw new JsonException('The file specifed is empty.');
 		}
 
 		//Get the data from the file
-		try {
-			if (false === $content = fopen($file, "r")) {
-				throw new JsonException('Could not open config file!');
-			}
-
-			$json = fread($content, filesize($file));
-			fclose($content);
-		} catch (JsonException $e) {
-			return;
+		if (false === $content = fopen($file, "r")) {
+			throw new JsonException('Could not open file!');
 		}
+
+		$json = fread($content, filesize($file));
+		fclose($content);
 
 		Log::success(sprintf('JSON retreived: %s', $json));
 		return json_decode($json, $array);
@@ -86,15 +82,11 @@ class Json
 	{
 		Log::info('Opening file');
 
-		try {
-			//Check the files exists
-			if (false === $file = fopen($file, 'w')) {
-				throw new JsonException('Could not open file');
-			}
-			Log::success('File opened');
-		} catch (JsonException $e) {
-			return;
+		//Check the files exists
+		if (false === $file = fopen($file, 'w')) {
+			throw new JsonException('Could not open file');
 		}
+		Log::success('File opened');
 
 		//Write to file
 		fwrite($file, json_encode($data));
