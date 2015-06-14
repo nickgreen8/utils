@@ -1,5 +1,17 @@
 <?php
-namespace N8G\Utils\Tests;
+namespace {
+	$mock = false;
+}
+
+namespace N8G\Utils {
+	function fopen() {
+		global $mock;
+		if (isset($mock) && $mock === true) {
+			return false;
+		} else {
+			return call_user_func_array('\fopen', func_get_args());
+		}
+	}
 
 use N8G\Utils\Json,
 	N8G\Utils\Log;
@@ -65,6 +77,9 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 					break;
 				case 'cantOpenFile' :
 					$this->setExpectedException('N8G\Utils\Exceptions\JsonException', 'Could not open file!');
+
+					global $mock;  
+					$mock = true;
 					break;
 				case 'invalid' :
 					$this->setExpectedException('N8G\Utils\Exceptions\JsonException', 'The JSON found is invalid.');
@@ -288,3 +303,5 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 		);
 	}
 }
+
+} // Close namespace

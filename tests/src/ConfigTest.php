@@ -1,5 +1,5 @@
 <?php
-namespace N8G\Utils\Tests;
+namespace N8G\Utils;
 
 use N8G\Utils\Config,
 	N8G\Utils\Log;
