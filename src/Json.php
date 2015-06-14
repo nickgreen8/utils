@@ -65,35 +65,70 @@ class Json
 		$json = fread($content, filesize($file));
 		fclose($content);
 
+		//Check the JSON is valid
+		if (!self::validate($json)) {
+			throw new JsonException('The JSON found is invalid.');
+		}
+
 		Log::success(sprintf('JSON retreived: %s', $json));
 		return json_decode($json, $array);
 	}
 
 	/**
 	 * This function is used to write out a JSON file. The data that is to be written must be
-	 * passed as an array. The file path and name must then also be passed. If there is an
-	 * error NULL is returned. If there is no error, true is returned.
+	 * passed as an array, string or an object. The file path and name must then also be passed.
+	 * If there is an error NULL is returned. If there is no error, true is returned.
 	 *
-	 * @param  array  $data The data to be encoded and then written
+	 * @param  mixed  $data The data to be encoded and then written
 	 * @param  string $file The path to the file
 	 * @return boolean|void
 	 */
-	public static function writeToFile(array $data, $file)
+	public static function writeToFile($data, $file)
 	{
 		Log::info('Opening file');
 
+		//Validate JSON
+		if (!self::validate(is_string($data) ? $data : json_encode($data))) {
+			throw new JsonException('The JSON specified is invalid.');
+		}
+
 		//Check the files exists
 		if (false === $file = fopen($file, 'w')) {
-			throw new JsonException('Could not open file');
+			throw new JsonException('Could not open file!');
 		}
 		Log::success('File opened');
 
 		//Write to file
-		fwrite($file, json_encode($data));
+		if (fwrite($file, is_string($data) ? $data : json_encode($data)) === FALSE) {
+			//Throw error
+			throw new JsonException('The data could not be written to file!');
+		}
 		Log::success('Data written to file');
 
 		//Close the file
 		fclose($file);
 		return true;
+	}
+
+	/**
+	 * This function is used to validate a JSON string. The string to be validated is passed to
+	 * the function and a boolean value indicating whether the JSON is valid is returned.
+	 *
+	 * @param  string  $json The JSON to be validated.
+	 * @return boolean       Indicates whether the JSON is valid.
+	 */
+	public static function validate($json)
+	{
+		//Decode the JSON
+		$data = json_decode($json);
+
+		//Check the decode was successful
+		if ($data !== null && json_last_error() === JSON_ERROR_NONE && preg_match("/^(\{|\[).*(\}|\])$/", str_replace("\n", '', trim(($json))))) {
+			//Return successful
+			return true;
+		}
+
+		//Return false by default
+		return false;
 	}
 }

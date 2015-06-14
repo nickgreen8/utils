@@ -1,0 +1,2984 @@
+{
+    "event": "suiteStart",
+    "suite": "tests",
+    "tests": 220
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest",
+    "tests": 46
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testInit"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testInit",
+    "status": "pass",
+    "time": 0.017086029052734,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testSetItem",
+    "tests": 5
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testSetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testSetItem with data set #0 ('string', 'string test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testSetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testSetItem with data set #0 ('string', 'string test')",
+    "status": "pass",
+    "time": 0.024811029434204,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testSetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testSetItem with data set #1 ('char', 'characters test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testSetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testSetItem with data set #1 ('char', 'characters test')",
+    "status": "pass",
+    "time": 0.018136978149414,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testSetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testSetItem with data set #2 ('int', 10)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testSetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testSetItem with data set #2 ('int', 10)",
+    "status": "pass",
+    "time": 0.024205923080444,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testSetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testSetItem with data set #3 ('bool', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testSetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testSetItem with data set #3 ('bool', true)",
+    "status": "pass",
+    "time": 0.017773866653442,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testSetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testSetItem with data set #4 ('float', 1.5)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testSetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testSetItem with data set #4 ('float', 1.5)",
+    "status": "pass",
+    "time": 0.019248962402344,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGetItem",
+    "tests": 5
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGetItem with data set #0 ('string', 'string test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGetItem with data set #0 ('string', 'string test')",
+    "status": "pass",
+    "time": 0.018756151199341,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGetItem with data set #1 ('char', 'characters test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGetItem with data set #1 ('char', 'characters test')",
+    "status": "pass",
+    "time": 0.018867015838623,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGetItem with data set #2 ('int', 10)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGetItem with data set #2 ('int', 10)",
+    "status": "pass",
+    "time": 0.018342018127441,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGetItem with data set #3 ('bool', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGetItem with data set #3 ('bool', true)",
+    "status": "pass",
+    "time": 0.020178079605103,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGetItem with data set #4 ('float', 1.5)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGetItem",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGetItem with data set #4 ('float', 1.5)",
+    "status": "pass",
+    "time": 0.018041133880615,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testInConfig",
+    "tests": 5
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testInConfig",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testInConfig with data set #0 ('string', 'string test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testInConfig",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testInConfig with data set #0 ('string', 'string test')",
+    "status": "pass",
+    "time": 0.02040696144104,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testInConfig",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testInConfig with data set #1 ('char', 'characters test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testInConfig",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testInConfig with data set #1 ('char', 'characters test')",
+    "status": "pass",
+    "time": 0.019963026046753,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testInConfig",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testInConfig with data set #2 ('int', 10)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testInConfig",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testInConfig with data set #2 ('int', 10)",
+    "status": "pass",
+    "time": 0.02020001411438,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testInConfig",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testInConfig with data set #3 ('bool', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testInConfig",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testInConfig with data set #3 ('bool', true)",
+    "status": "pass",
+    "time": 0.020492076873779,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testInConfig",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testInConfig with data set #4 ('float', 1.5)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testInConfig",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testInConfig with data set #4 ('float', 1.5)",
+    "status": "pass",
+    "time": 0.019373893737793,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter",
+    "tests": 5
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter with data set #0 ('string', 'string test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter with data set #0 ('string', 'string test')",
+    "status": "pass",
+    "time": 0.020163059234619,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter with data set #1 ('char', 'characters test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter with data set #1 ('char', 'characters test')",
+    "status": "pass",
+    "time": 0.018841981887817,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter with data set #2 ('int', 10)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter with data set #2 ('int', 10)",
+    "status": "pass",
+    "time": 0.019454002380371,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter with data set #3 ('bool', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter with data set #3 ('bool', true)",
+    "status": "pass",
+    "time": 0.023091077804565,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter with data set #4 ('float', 1.5)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericSetter with data set #4 ('float', 1.5)",
+    "status": "pass",
+    "time": 0.017404794692993,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter",
+    "tests": 5
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter with data set #0 ('string', 'string test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter with data set #0 ('string', 'string test')",
+    "status": "pass",
+    "time": 0.020251989364624,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter with data set #1 ('char', 'characters test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter with data set #1 ('char', 'characters test')",
+    "status": "pass",
+    "time": 0.016983985900879,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter with data set #2 ('int', 10)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter with data set #2 ('int', 10)",
+    "status": "pass",
+    "time": 0.020208120346069,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter with data set #3 ('bool', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter with data set #3 ('bool', true)",
+    "status": "pass",
+    "time": 0.020066022872925,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter with data set #4 ('float', 1.5)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testGenericGetter with data set #4 ('float', 1.5)",
+    "status": "pass",
+    "time": 0.018796920776367,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testClear",
+    "tests": 5
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testClear",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testClear with data set #0 ('string', 'string test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testClear",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testClear with data set #0 ('string', 'string test')",
+    "status": "pass",
+    "time": 0.01276707649231,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testClear",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testClear with data set #1 ('char', 'characters test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testClear",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testClear with data set #1 ('char', 'characters test')",
+    "status": "pass",
+    "time": 0.014685869216919,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testClear",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testClear with data set #2 ('int', 10)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testClear",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testClear with data set #2 ('int', 10)",
+    "status": "pass",
+    "time": 0.012282848358154,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testClear",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testClear with data set #3 ('bool', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testClear",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testClear with data set #3 ('bool', true)",
+    "status": "pass",
+    "time": 0.01279091835022,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testClear",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testClear with data set #4 ('float', 1.5)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testClear",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testClear with data set #4 ('float', 1.5)",
+    "status": "pass",
+    "time": 0.015583992004395,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter",
+    "tests": 5
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter with data set #0 ('string', 'string test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter with data set #0 ('string', 'string test')",
+    "status": "pass",
+    "time": 0.015370845794678,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter with data set #1 ('char', 'characters test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter with data set #1 ('char', 'characters test')",
+    "status": "pass",
+    "time": 0.012686967849731,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter with data set #2 ('int', 10)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter with data set #2 ('int', 10)",
+    "status": "pass",
+    "time": 0.015288114547729,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter with data set #3 ('bool', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter with data set #3 ('bool', true)",
+    "status": "pass",
+    "time": 0.014594078063965,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter with data set #4 ('float', 1.5)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGetter with data set #4 ('float', 1.5)",
+    "status": "pass",
+    "time": 0.012932062149048,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter",
+    "tests": 5
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter with data set #0 ('string', 'string test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter with data set #0 ('string', 'string test')",
+    "status": "pass",
+    "time": 0.017019033432007,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter with data set #1 ('char', 'characters test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter with data set #1 ('char', 'characters test')",
+    "status": "pass",
+    "time": 0.015077829360962,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter with data set #2 ('int', 10)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter with data set #2 ('int', 10)",
+    "status": "pass",
+    "time": 0.016157865524292,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter with data set #3 ('bool', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter with data set #3 ('bool', true)",
+    "status": "pass",
+    "time": 0.015611886978149,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter with data set #4 ('float', 1.5)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testFailedGenericGetter with data set #4 ('float', 1.5)",
+    "status": "pass",
+    "time": 0.023850202560425,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback",
+    "tests": 5
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback with data set #0 ('string', 'string test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback with data set #0 ('string', 'string test')",
+    "status": "pass",
+    "time": 0.018952131271362,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback with data set #1 ('char', 'characters test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback with data set #1 ('char', 'characters test')",
+    "status": "pass",
+    "time": 0.015872955322266,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback with data set #2 ('int', 10)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback with data set #2 ('int', 10)",
+    "status": "pass",
+    "time": 0.014153957366943,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback with data set #3 ('bool', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback with data set #3 ('bool', true)",
+    "status": "pass",
+    "time": 0.018749952316284,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback with data set #4 ('float', 1.5)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback",
+    "test": "N8G\\Utils\\Tests\\ConfigTest::testStaticCallback with data set #4 ('float', 1.5)",
+    "status": "pass",
+    "time": 0.013424873352051,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest",
+    "tests": 29
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testFileExists",
+    "tests": 4
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testFileExists",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testFileExists with data set #0 ('success', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testFileExists",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testFileExists with data set #0 ('success', true)",
+    "status": "pass",
+    "time": 0.019819021224976,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testFileExists",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testFileExists with data set #1 ('invalid', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testFileExists",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testFileExists with data set #1 ('invalid', true)",
+    "status": "pass",
+    "time": 0.016036033630371,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testFileExists",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testFileExists with data set #2 ('doesNotExist', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testFileExists",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testFileExists with data set #2 ('doesNotExist', false)",
+    "status": "pass",
+    "time": 0.019969940185547,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testFileExists",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testFileExists with data set #3 ('empty', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testFileExists",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testFileExists with data set #3 ('empty', true)",
+    "status": "pass",
+    "time": 0.018247842788696,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testReadFile",
+    "tests": 6
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testReadFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testReadFile with data set #0 ('success', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testReadFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testReadFile with data set #0 ('success', true)",
+    "status": "pass",
+    "time": 0.014970064163208,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testReadFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testReadFile with data set #1 ('success', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testReadFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testReadFile with data set #1 ('success', false)",
+    "status": "pass",
+    "time": 0.015625953674316,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testReadFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testReadFile with data set #2 ('invalid', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testReadFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testReadFile with data set #2 ('invalid', true)",
+    "status": "pass",
+    "time": 0.015030860900879,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testReadFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testReadFile with data set #3 ('doesNotExist', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testReadFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testReadFile with data set #3 ('doesNotExist', false)",
+    "status": "pass",
+    "time": 0.014033079147339,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testReadFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testReadFile with data set #4 ('empty', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testReadFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testReadFile with data set #4 ('empty', true)",
+    "status": "pass",
+    "time": 0.018923997879028,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testReadFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testReadFile with data set #5 ('cantOpenFile', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testReadFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testReadFile with data set #5 ('cantOpenFile', true)",
+    "status": "fail",
+    "time": 0.018015146255493,
+    "trace": [
+        {
+            "file": "phar:\/\/\/usr\/local\/bin\/phpunit\/phpunit\/TextUI\/Command.php",
+            "line": 186,
+            "function": "doRun",
+            "class": "PHPUnit_TextUI_TestRunner",
+            "type": "->"
+        },
+        {
+            "file": "phar:\/\/\/usr\/local\/bin\/phpunit\/phpunit\/TextUI\/Command.php",
+            "line": 138,
+            "function": "run",
+            "class": "PHPUnit_TextUI_Command",
+            "type": "->"
+        }
+    ],
+    "message": "Failed asserting that exception message 'The JSON found is invalid.' contains 'Could not open file!'.",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile",
+    "tests": 6
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile with data set #0 ('{ \"test\": \"This is a test\" }', '.\/tests\/fixtures\/json\/write\/test1.json', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile with data set #0 ('{ \"test\": \"This is a test\" }', '.\/tests\/fixtures\/json\/write\/test1.json', true)",
+    "status": "pass",
+    "time": 0.016875028610229,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile with data set #1 ('Testing', '.\/tests\/fixtures\/json\/write\/test2.json', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile with data set #1 ('Testing', '.\/tests\/fixtures\/json\/write\/test2.json', false)",
+    "status": "pass",
+    "time": 0.014526128768921,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile with data set #2 (array('This is another test'), '.\/tests\/fixtures\/json\/write\/test3.json', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile with data set #2 (array('This is another test'), '.\/tests\/fixtures\/json\/write\/test3.json', true)",
+    "status": "pass",
+    "time": 0.014371156692505,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile with data set #3 (array(1, '2', 3.0, true, false, null), '.\/tests\/fixtures\/json\/write\/test4.json', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile with data set #3 (array(1, '2', 3.0, true, false, null), '.\/tests\/fixtures\/json\/write\/test4.json', true)",
+    "status": "pass",
+    "time": 0.016036033630371,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile with data set #4 (array(), '.\/tests\/fixtures\/json\/write\/test5.json', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile with data set #4 (array(), '.\/tests\/fixtures\/json\/write\/test5.json', true)",
+    "status": "pass",
+    "time": 0.017043113708496,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile with data set #5 (null, '.\/tests\/fixtures\/json\/write\/test6.json', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testWriteToFile with data set #5 (null, '.\/tests\/fixtures\/json\/write\/test6.json', false)",
+    "status": "pass",
+    "time": 0.014639139175415,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testWriteToFileWithObject"
+}{
+    "event": "test",
+    "suite": "",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testWriteToFileWithObject",
+    "status": "pass",
+    "time": 0.015633106231689,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "tests": 12
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #0 ('{ \"test\": \"\" }', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #0 ('{ \"test\": \"\" }', true)",
+    "status": "pass",
+    "time": 0.017140865325928,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #1 ('{ \"test\":  }', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #1 ('{ \"test\":  }', false)",
+    "status": "pass",
+    "time": 0.017778158187866,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #2 ('{ 'test':  }', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #2 ('{ 'test':  }', false)",
+    "status": "pass",
+    "time": 0.015230178833008,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #3 ('{ \"test\": 'test' }', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #3 ('{ \"test\": 'test' }', false)",
+    "status": "pass",
+    "time": 0.017702102661133,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #4 ('{ \"test\": 1 }', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #4 ('{ \"test\": 1 }', true)",
+    "status": "pass",
+    "time": 0.015576124191284,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #5 ('{ \"test\": true }', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #5 ('{ \"test\": true }', true)",
+    "status": "pass",
+    "time": 0.018845081329346,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #6 ('{ \"test\": 1.5 }', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #6 ('{ \"test\": 1.5 }', true)",
+    "status": "pass",
+    "time": 0.017339944839478,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #7 ('', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #7 ('', false)",
+    "status": "pass",
+    "time": 0.017822980880737,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #8 (null, false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #8 (null, false)",
+    "status": "pass",
+    "time": 0.015131950378418,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #9 (1, false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #9 (1, false)",
+    "status": "pass",
+    "time": 0.019097089767456,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #10 (1.5, false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #10 (1.5, false)",
+    "status": "pass",
+    "time": 0.018040180206299,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #11 (true, false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\JsonTest::testValidateJson",
+    "test": "N8G\\Utils\\Tests\\JsonTest::testValidateJson with data set #11 (true, false)",
+    "status": "pass",
+    "time": 0.019047021865845,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest",
+    "tests": 51
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInit"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInit",
+    "status": "pass",
+    "time": 0.026477813720703,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "tests": 7
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "test": "N8G\\Utils\\Tests\\LogTest::testFatal with data set #0 ('This is a test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "test": "N8G\\Utils\\Tests\\LogTest::testFatal with data set #0 ('This is a test')",
+    "status": "pass",
+    "time": 0.012551069259644,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "test": "N8G\\Utils\\Tests\\LogTest::testFatal with data set #1 (1234567890)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "test": "N8G\\Utils\\Tests\\LogTest::testFatal with data set #1 (1234567890)",
+    "status": "pass",
+    "time": 0.014034986495972,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "test": "N8G\\Utils\\Tests\\LogTest::testFatal with data set #2 (1234.5678)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "test": "N8G\\Utils\\Tests\\LogTest::testFatal with data set #2 (1234.5678)",
+    "status": "pass",
+    "time": 0.012583017349243,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "test": "N8G\\Utils\\Tests\\LogTest::testFatal with data set #3 (0)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "test": "N8G\\Utils\\Tests\\LogTest::testFatal with data set #3 (0)",
+    "status": "pass",
+    "time": 0.011825084686279,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "test": "N8G\\Utils\\Tests\\LogTest::testFatal with data set #4 (true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "test": "N8G\\Utils\\Tests\\LogTest::testFatal with data set #4 (true)",
+    "status": "pass",
+    "time": 0.013044118881226,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "test": "N8G\\Utils\\Tests\\LogTest::testFatal with data set #5 (false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "test": "N8G\\Utils\\Tests\\LogTest::testFatal with data set #5 (false)",
+    "status": "pass",
+    "time": 0.011856079101562,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "test": "N8G\\Utils\\Tests\\LogTest::testFatal with data set #6 (null)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testFatal",
+    "test": "N8G\\Utils\\Tests\\LogTest::testFatal with data set #6 (null)",
+    "status": "pass",
+    "time": 0.014825820922852,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "tests": 7
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "test": "N8G\\Utils\\Tests\\LogTest::testError with data set #0 ('This is a test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "test": "N8G\\Utils\\Tests\\LogTest::testError with data set #0 ('This is a test')",
+    "status": "pass",
+    "time": 0.012083053588867,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "test": "N8G\\Utils\\Tests\\LogTest::testError with data set #1 (1234567890)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "test": "N8G\\Utils\\Tests\\LogTest::testError with data set #1 (1234567890)",
+    "status": "pass",
+    "time": 0.012783050537109,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "test": "N8G\\Utils\\Tests\\LogTest::testError with data set #2 (1234.5678)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "test": "N8G\\Utils\\Tests\\LogTest::testError with data set #2 (1234.5678)",
+    "status": "pass",
+    "time": 0.013987064361572,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "test": "N8G\\Utils\\Tests\\LogTest::testError with data set #3 (0)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "test": "N8G\\Utils\\Tests\\LogTest::testError with data set #3 (0)",
+    "status": "pass",
+    "time": 0.012893915176392,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "test": "N8G\\Utils\\Tests\\LogTest::testError with data set #4 (true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "test": "N8G\\Utils\\Tests\\LogTest::testError with data set #4 (true)",
+    "status": "pass",
+    "time": 0.013746023178101,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "test": "N8G\\Utils\\Tests\\LogTest::testError with data set #5 (false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "test": "N8G\\Utils\\Tests\\LogTest::testError with data set #5 (false)",
+    "status": "pass",
+    "time": 0.012655973434448,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "test": "N8G\\Utils\\Tests\\LogTest::testError with data set #6 (null)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testError",
+    "test": "N8G\\Utils\\Tests\\LogTest::testError with data set #6 (null)",
+    "status": "pass",
+    "time": 0.011911869049072,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "tests": 7
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "test": "N8G\\Utils\\Tests\\LogTest::testWarning with data set #0 ('This is a test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "test": "N8G\\Utils\\Tests\\LogTest::testWarning with data set #0 ('This is a test')",
+    "status": "pass",
+    "time": 0.014454126358032,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "test": "N8G\\Utils\\Tests\\LogTest::testWarning with data set #1 (1234567890)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "test": "N8G\\Utils\\Tests\\LogTest::testWarning with data set #1 (1234567890)",
+    "status": "pass",
+    "time": 0.013250112533569,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "test": "N8G\\Utils\\Tests\\LogTest::testWarning with data set #2 (1234.5678)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "test": "N8G\\Utils\\Tests\\LogTest::testWarning with data set #2 (1234.5678)",
+    "status": "pass",
+    "time": 0.01360011100769,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "test": "N8G\\Utils\\Tests\\LogTest::testWarning with data set #3 (0)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "test": "N8G\\Utils\\Tests\\LogTest::testWarning with data set #3 (0)",
+    "status": "pass",
+    "time": 0.011981964111328,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "test": "N8G\\Utils\\Tests\\LogTest::testWarning with data set #4 (true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "test": "N8G\\Utils\\Tests\\LogTest::testWarning with data set #4 (true)",
+    "status": "pass",
+    "time": 0.014050960540771,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "test": "N8G\\Utils\\Tests\\LogTest::testWarning with data set #5 (false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "test": "N8G\\Utils\\Tests\\LogTest::testWarning with data set #5 (false)",
+    "status": "pass",
+    "time": 0.012243986129761,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "test": "N8G\\Utils\\Tests\\LogTest::testWarning with data set #6 (null)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testWarning",
+    "test": "N8G\\Utils\\Tests\\LogTest::testWarning with data set #6 (null)",
+    "status": "pass",
+    "time": 0.014550924301147,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "tests": 7
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "test": "N8G\\Utils\\Tests\\LogTest::testNotice with data set #0 ('This is a test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "test": "N8G\\Utils\\Tests\\LogTest::testNotice with data set #0 ('This is a test')",
+    "status": "pass",
+    "time": 0.013438940048218,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "test": "N8G\\Utils\\Tests\\LogTest::testNotice with data set #1 (1234567890)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "test": "N8G\\Utils\\Tests\\LogTest::testNotice with data set #1 (1234567890)",
+    "status": "pass",
+    "time": 0.013876914978027,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "test": "N8G\\Utils\\Tests\\LogTest::testNotice with data set #2 (1234.5678)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "test": "N8G\\Utils\\Tests\\LogTest::testNotice with data set #2 (1234.5678)",
+    "status": "pass",
+    "time": 0.012017965316772,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "test": "N8G\\Utils\\Tests\\LogTest::testNotice with data set #3 (0)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "test": "N8G\\Utils\\Tests\\LogTest::testNotice with data set #3 (0)",
+    "status": "pass",
+    "time": 0.015661001205444,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "test": "N8G\\Utils\\Tests\\LogTest::testNotice with data set #4 (true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "test": "N8G\\Utils\\Tests\\LogTest::testNotice with data set #4 (true)",
+    "status": "pass",
+    "time": 0.012197017669678,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "test": "N8G\\Utils\\Tests\\LogTest::testNotice with data set #5 (false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "test": "N8G\\Utils\\Tests\\LogTest::testNotice with data set #5 (false)",
+    "status": "pass",
+    "time": 0.015230178833008,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "test": "N8G\\Utils\\Tests\\LogTest::testNotice with data set #6 (null)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testNotice",
+    "test": "N8G\\Utils\\Tests\\LogTest::testNotice with data set #6 (null)",
+    "status": "pass",
+    "time": 0.01283597946167,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "tests": 7
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInfo with data set #0 ('This is a test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInfo with data set #0 ('This is a test')",
+    "status": "pass",
+    "time": 0.011972188949585,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInfo with data set #1 (1234567890)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInfo with data set #1 (1234567890)",
+    "status": "pass",
+    "time": 0.012823104858398,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInfo with data set #2 (1234.5678)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInfo with data set #2 (1234.5678)",
+    "status": "pass",
+    "time": 0.013155937194824,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInfo with data set #3 (0)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInfo with data set #3 (0)",
+    "status": "pass",
+    "time": 0.012646913528442,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInfo with data set #4 (true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInfo with data set #4 (true)",
+    "status": "pass",
+    "time": 0.01471996307373,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInfo with data set #5 (false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInfo with data set #5 (false)",
+    "status": "pass",
+    "time": 0.012990951538086,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInfo with data set #6 (null)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testInfo",
+    "test": "N8G\\Utils\\Tests\\LogTest::testInfo with data set #6 (null)",
+    "status": "pass",
+    "time": 0.013111114501953,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "tests": 7
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "test": "N8G\\Utils\\Tests\\LogTest::testDebug with data set #0 ('This is a test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "test": "N8G\\Utils\\Tests\\LogTest::testDebug with data set #0 ('This is a test')",
+    "status": "pass",
+    "time": 0.01468300819397,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "test": "N8G\\Utils\\Tests\\LogTest::testDebug with data set #1 (1234567890)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "test": "N8G\\Utils\\Tests\\LogTest::testDebug with data set #1 (1234567890)",
+    "status": "pass",
+    "time": 0.012019872665405,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "test": "N8G\\Utils\\Tests\\LogTest::testDebug with data set #2 (1234.5678)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "test": "N8G\\Utils\\Tests\\LogTest::testDebug with data set #2 (1234.5678)",
+    "status": "pass",
+    "time": 0.016558170318604,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "test": "N8G\\Utils\\Tests\\LogTest::testDebug with data set #3 (0)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "test": "N8G\\Utils\\Tests\\LogTest::testDebug with data set #3 (0)",
+    "status": "pass",
+    "time": 0.012314081192017,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "test": "N8G\\Utils\\Tests\\LogTest::testDebug with data set #4 (true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "test": "N8G\\Utils\\Tests\\LogTest::testDebug with data set #4 (true)",
+    "status": "pass",
+    "time": 0.012895107269287,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "test": "N8G\\Utils\\Tests\\LogTest::testDebug with data set #5 (false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "test": "N8G\\Utils\\Tests\\LogTest::testDebug with data set #5 (false)",
+    "status": "pass",
+    "time": 0.013673067092896,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "test": "N8G\\Utils\\Tests\\LogTest::testDebug with data set #6 (null)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testDebug",
+    "test": "N8G\\Utils\\Tests\\LogTest::testDebug with data set #6 (null)",
+    "status": "pass",
+    "time": 0.013087034225464,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "tests": 7
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "test": "N8G\\Utils\\Tests\\LogTest::testSuccess with data set #0 ('This is a test')"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "test": "N8G\\Utils\\Tests\\LogTest::testSuccess with data set #0 ('This is a test')",
+    "status": "pass",
+    "time": 0.013226985931396,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "test": "N8G\\Utils\\Tests\\LogTest::testSuccess with data set #1 (1234567890)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "test": "N8G\\Utils\\Tests\\LogTest::testSuccess with data set #1 (1234567890)",
+    "status": "pass",
+    "time": 0.01634693145752,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "test": "N8G\\Utils\\Tests\\LogTest::testSuccess with data set #2 (1234.5678)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "test": "N8G\\Utils\\Tests\\LogTest::testSuccess with data set #2 (1234.5678)",
+    "status": "pass",
+    "time": 0.012411117553711,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "test": "N8G\\Utils\\Tests\\LogTest::testSuccess with data set #3 (0)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "test": "N8G\\Utils\\Tests\\LogTest::testSuccess with data set #3 (0)",
+    "status": "pass",
+    "time": 0.012990951538086,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "test": "N8G\\Utils\\Tests\\LogTest::testSuccess with data set #4 (true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "test": "N8G\\Utils\\Tests\\LogTest::testSuccess with data set #4 (true)",
+    "status": "pass",
+    "time": 0.014543056488037,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "test": "N8G\\Utils\\Tests\\LogTest::testSuccess with data set #5 (false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "test": "N8G\\Utils\\Tests\\LogTest::testSuccess with data set #5 (false)",
+    "status": "pass",
+    "time": 0.014715909957886,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "test": "N8G\\Utils\\Tests\\LogTest::testSuccess with data set #6 (null)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\LogTest::testSuccess",
+    "test": "N8G\\Utils\\Tests\\LogTest::testSuccess with data set #6 (null)",
+    "status": "pass",
+    "time": 0.0140540599823,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "",
+    "test": "N8G\\Utils\\Tests\\LogTest::testReset"
+}{
+    "event": "test",
+    "suite": "",
+    "test": "N8G\\Utils\\Tests\\LogTest::testReset",
+    "status": "pass",
+    "time": 0.013797044754028,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest",
+    "tests": 94
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "tests": 10
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #0 ('test@test.com', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #0 ('test@test.com', true)",
+    "status": "pass",
+    "time": 0.030961036682129,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #1 ('test@test.co.uk', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #1 ('test@test.co.uk', true)",
+    "status": "pass",
+    "time": 0.016513824462891,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #2 ('test@test.com.au', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #2 ('test@test.com.au', true)",
+    "status": "pass",
+    "time": 0.018105983734131,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #3 ('test@thisisatest.com', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #3 ('test@thisisatest.com', true)",
+    "status": "pass",
+    "time": 0.016674041748047,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #4 ('this.is.a.test@test.co.uk', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #4 ('this.is.a.test@test.co.uk', true)",
+    "status": "pass",
+    "time": 0.018292903900146,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #5 ('test', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #5 ('test', false)",
+    "status": "pass",
+    "time": 0.015602827072144,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #6 ('test@@test.com', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #6 ('test@@test.com', false)",
+    "status": "pass",
+    "time": 0.01688289642334,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #7 ('test@test.thisisatest', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #7 ('test@test.thisisatest', false)",
+    "status": "pass",
+    "time": 0.015506029129028,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #8 ('this.is.a.test', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #8 ('this.is.a.test', false)",
+    "status": "pass",
+    "time": 0.018646001815796,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #9 ('test@this.is.a.test', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testEmail",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testEmail with data set #9 ('test@this.is.a.test', false)",
+    "status": "pass",
+    "time": 0.015722036361694,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "tests": 84
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #0 ('01\/01\/2000', 'dd\/mm\/yyyy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #0 ('01\/01\/2000', 'dd\/mm\/yyyy', true)",
+    "status": "pass",
+    "time": 0.018588066101074,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #1 ('01\/01\/00', 'dd\/mm\/yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #1 ('01\/01\/00', 'dd\/mm\/yyyy', false)",
+    "status": "pass",
+    "time": 0.016937017440796,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #2 ('01-01-2000', 'dd\/mm\/yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #2 ('01-01-2000', 'dd\/mm\/yyyy', false)",
+    "status": "pass",
+    "time": 0.016312122344971,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #3 ('01-01-00', 'dd\/mm\/yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #3 ('01-01-00', 'dd\/mm\/yyyy', false)",
+    "status": "pass",
+    "time": 0.017275094985962,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #4 ('01.01.2000', 'dd\/mm\/yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #4 ('01.01.2000', 'dd\/mm\/yyyy', false)",
+    "status": "pass",
+    "time": 0.017225980758667,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #5 ('01.01.00', 'dd\/mm\/yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #5 ('01.01.00', 'dd\/mm\/yyyy', false)",
+    "status": "pass",
+    "time": 0.016517877578735,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #6 ('00\/01\/2000', 'dd\/mm\/yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #6 ('00\/01\/2000', 'dd\/mm\/yyyy', false)",
+    "status": "pass",
+    "time": 0.018172025680542,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #7 ('32\/01\/2000', 'dd\/mm\/yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #7 ('32\/01\/2000', 'dd\/mm\/yyyy', false)",
+    "status": "pass",
+    "time": 0.016918897628784,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #8 ('01\/00\/2000', 'dd\/mm\/yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #8 ('01\/00\/2000', 'dd\/mm\/yyyy', false)",
+    "status": "pass",
+    "time": 0.017890930175781,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #9 ('01\/13\/2000', 'dd\/mm\/yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #9 ('01\/13\/2000', 'dd\/mm\/yyyy', false)",
+    "status": "pass",
+    "time": 0.015241146087646,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #10 ('29\/02\/2000', 'dd\/mm\/yyyy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #10 ('29\/02\/2000', 'dd\/mm\/yyyy', true)",
+    "status": "pass",
+    "time": 0.018932104110718,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #11 ('29\/02\/2001', 'dd\/mm\/yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #11 ('29\/02\/2001', 'dd\/mm\/yyyy', false)",
+    "status": "pass",
+    "time": 0.017761945724487,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #12 ('30\/04\/2000', 'dd\/mm\/yyyy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #12 ('30\/04\/2000', 'dd\/mm\/yyyy', true)",
+    "status": "pass",
+    "time": 0.020124912261963,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #13 ('31\/04\/2000', 'dd\/mm\/yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #13 ('31\/04\/2000', 'dd\/mm\/yyyy', false)",
+    "status": "pass",
+    "time": 0.017532825469971,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #14 ('01\/01\/2000', 'dd\/mm\/yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #14 ('01\/01\/2000', 'dd\/mm\/yy', false)",
+    "status": "pass",
+    "time": 0.018901109695435,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #15 ('01\/01\/00', 'dd\/mm\/yy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #15 ('01\/01\/00', 'dd\/mm\/yy', true)",
+    "status": "pass",
+    "time": 0.017582893371582,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #16 ('01-01-2000', 'dd\/mm\/yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #16 ('01-01-2000', 'dd\/mm\/yy', false)",
+    "status": "pass",
+    "time": 0.017548084259033,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #17 ('01-01-00', 'dd\/mm\/yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #17 ('01-01-00', 'dd\/mm\/yy', false)",
+    "status": "pass",
+    "time": 0.015217065811157,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #18 ('01.01.2000', 'dd\/mm\/yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #18 ('01.01.2000', 'dd\/mm\/yy', false)",
+    "status": "pass",
+    "time": 0.018774032592773,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #19 ('01.01.00', 'dd\/mm\/yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #19 ('01.01.00', 'dd\/mm\/yy', false)",
+    "status": "pass",
+    "time": 0.017315864562988,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #20 ('00\/01\/00', 'dd\/mm\/yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #20 ('00\/01\/00', 'dd\/mm\/yy', false)",
+    "status": "pass",
+    "time": 0.01860499382019,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #21 ('32\/01\/00', 'dd\/mm\/yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #21 ('32\/01\/00', 'dd\/mm\/yy', false)",
+    "status": "pass",
+    "time": 0.018066883087158,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #22 ('01\/00\/00', 'dd\/mm\/yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #22 ('01\/00\/00', 'dd\/mm\/yy', false)",
+    "status": "pass",
+    "time": 0.017203807830811,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #23 ('01\/13\/00', 'dd\/mm\/yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #23 ('01\/13\/00', 'dd\/mm\/yy', false)",
+    "status": "pass",
+    "time": 0.015338897705078,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #24 ('29\/02\/00', 'dd\/mm\/yy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #24 ('29\/02\/00', 'dd\/mm\/yy', true)",
+    "status": "pass",
+    "time": 0.015630006790161,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #25 ('29\/02\/01', 'dd\/mm\/yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #25 ('29\/02\/01', 'dd\/mm\/yy', false)",
+    "status": "pass",
+    "time": 0.015629053115845,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #26 ('30\/04\/00', 'dd\/mm\/yy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #26 ('30\/04\/00', 'dd\/mm\/yy', true)",
+    "status": "pass",
+    "time": 0.018404006958008,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #27 ('31\/04\/00', 'dd\/mm\/yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #27 ('31\/04\/00', 'dd\/mm\/yy', false)",
+    "status": "pass",
+    "time": 0.015420913696289,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #28 ('01\/01\/2000', 'dd-mm-yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #28 ('01\/01\/2000', 'dd-mm-yyyy', false)",
+    "status": "pass",
+    "time": 0.017407894134521,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #29 ('01\/01\/00', 'dd-mm-yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #29 ('01\/01\/00', 'dd-mm-yyyy', false)",
+    "status": "pass",
+    "time": 0.017263889312744,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #30 ('01-01-2000', 'dd-mm-yyyy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #30 ('01-01-2000', 'dd-mm-yyyy', true)",
+    "status": "pass",
+    "time": 0.018792152404785,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #31 ('01-01-00', 'dd-mm-yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #31 ('01-01-00', 'dd-mm-yyyy', false)",
+    "status": "pass",
+    "time": 0.017534971237183,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #32 ('01.01.2000', 'dd-mm-yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #32 ('01.01.2000', 'dd-mm-yyyy', false)",
+    "status": "pass",
+    "time": 0.028369903564453,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #33 ('01.01.00', 'dd-mm-yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #33 ('01.01.00', 'dd-mm-yyyy', false)",
+    "status": "pass",
+    "time": 0.016580104827881,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #34 ('00-01-2000', 'dd-mm-yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #34 ('00-01-2000', 'dd-mm-yyyy', false)",
+    "status": "pass",
+    "time": 0.019634008407593,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #35 ('32-01-2000', 'dd-mm-yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #35 ('32-01-2000', 'dd-mm-yyyy', false)",
+    "status": "pass",
+    "time": 0.016782999038696,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #36 ('01-00-2000', 'dd-mm-yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #36 ('01-00-2000', 'dd-mm-yyyy', false)",
+    "status": "pass",
+    "time": 0.016658067703247,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #37 ('01-13-2000', 'dd-mm-yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #37 ('01-13-2000', 'dd-mm-yyyy', false)",
+    "status": "pass",
+    "time": 0.017503023147583,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #38 ('29-02-2000', 'dd-mm-yyyy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #38 ('29-02-2000', 'dd-mm-yyyy', true)",
+    "status": "pass",
+    "time": 0.019097089767456,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #39 ('29-02-2001', 'dd-mm-yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #39 ('29-02-2001', 'dd-mm-yyyy', false)",
+    "status": "pass",
+    "time": 0.01616907119751,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #40 ('30-04-2000', 'dd-mm-yyyy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #40 ('30-04-2000', 'dd-mm-yyyy', true)",
+    "status": "pass",
+    "time": 0.017606019973755,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #41 ('31-04-2000', 'dd-mm-yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #41 ('31-04-2000', 'dd-mm-yyyy', false)",
+    "status": "pass",
+    "time": 0.017565965652466,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #42 ('01\/01\/2000', 'dd-mm-yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #42 ('01\/01\/2000', 'dd-mm-yy', false)",
+    "status": "pass",
+    "time": 0.018752098083496,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #43 ('01\/01\/00', 'dd-mm-yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #43 ('01\/01\/00', 'dd-mm-yy', false)",
+    "status": "pass",
+    "time": 0.015316009521484,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #44 ('01-01-2000', 'dd-mm-yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #44 ('01-01-2000', 'dd-mm-yy', false)",
+    "status": "pass",
+    "time": 0.017217874526978,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #45 ('01-01-00', 'dd-mm-yy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #45 ('01-01-00', 'dd-mm-yy', true)",
+    "status": "pass",
+    "time": 0.017772197723389,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #46 ('01.01.2000', 'dd-mm-yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #46 ('01.01.2000', 'dd-mm-yy', false)",
+    "status": "pass",
+    "time": 0.018882989883423,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #47 ('01.01.00', 'dd-mm-yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #47 ('01.01.00', 'dd-mm-yy', false)",
+    "status": "pass",
+    "time": 0.01527214050293,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #48 ('00-01-00', 'dd-mm-yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #48 ('00-01-00', 'dd-mm-yy', false)",
+    "status": "pass",
+    "time": 0.017867088317871,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #49 ('32-01-00', 'dd-mm-yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #49 ('32-01-00', 'dd-mm-yy', false)",
+    "status": "pass",
+    "time": 0.016638994216919,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #50 ('01-00-00', 'dd-mm-yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #50 ('01-00-00', 'dd-mm-yy', false)",
+    "status": "pass",
+    "time": 0.016779899597168,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #51 ('01-13-00', 'dd-mm-yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #51 ('01-13-00', 'dd-mm-yy', false)",
+    "status": "pass",
+    "time": 0.016623020172119,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #52 ('29-02-00', 'dd-mm-yy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #52 ('29-02-00', 'dd-mm-yy', true)",
+    "status": "pass",
+    "time": 0.018794059753418,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #53 ('29-02-01', 'dd-mm-yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #53 ('29-02-01', 'dd-mm-yy', false)",
+    "status": "pass",
+    "time": 0.017052888870239,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #54 ('30-04-00', 'dd-mm-yy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #54 ('30-04-00', 'dd-mm-yy', true)",
+    "status": "pass",
+    "time": 0.017469882965088,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #55 ('31-04-00', 'dd-mm-yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #55 ('31-04-00', 'dd-mm-yy', false)",
+    "status": "pass",
+    "time": 0.015949010848999,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #56 ('01\/01\/2000', 'dd.mm.yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #56 ('01\/01\/2000', 'dd.mm.yyyy', false)",
+    "status": "pass",
+    "time": 0.016458034515381,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #57 ('01\/01\/00', 'dd.mm.yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #57 ('01\/01\/00', 'dd.mm.yyyy', false)",
+    "status": "pass",
+    "time": 0.015344142913818,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #58 ('01-01-2000', 'dd.mm.yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #58 ('01-01-2000', 'dd.mm.yyyy', false)",
+    "status": "pass",
+    "time": 0.018551111221313,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #59 ('01-01-00', 'dd.mm.yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #59 ('01-01-00', 'dd.mm.yyyy', false)",
+    "status": "pass",
+    "time": 0.017474174499512,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #60 ('01.01.2000', 'dd.mm.yyyy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #60 ('01.01.2000', 'dd.mm.yyyy', true)",
+    "status": "pass",
+    "time": 0.017580032348633,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #61 ('01.01.00', 'dd.mm.yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #61 ('01.01.00', 'dd.mm.yyyy', false)",
+    "status": "pass",
+    "time": 0.015353918075562,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #62 ('00.01.2000', 'dd.mm.yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #62 ('00.01.2000', 'dd.mm.yyyy', false)",
+    "status": "pass",
+    "time": 0.018748044967651,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #63 ('32.01.2000', 'dd.mm.yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #63 ('32.01.2000', 'dd.mm.yyyy', false)",
+    "status": "pass",
+    "time": 0.015467166900635,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #64 ('01.00.2000', 'dd.mm.yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #64 ('01.00.2000', 'dd.mm.yyyy', false)",
+    "status": "pass",
+    "time": 0.017109870910645,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #65 ('01.13.2000', 'dd.mm.yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #65 ('01.13.2000', 'dd.mm.yyyy', false)",
+    "status": "pass",
+    "time": 0.015419006347656,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #66 ('29.02.2000', 'dd.mm.yyyy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #66 ('29.02.2000', 'dd.mm.yyyy', true)",
+    "status": "pass",
+    "time": 0.020553827285767,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #67 ('29.02.2001', 'dd.mm.yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #67 ('29.02.2001', 'dd.mm.yyyy', false)",
+    "status": "pass",
+    "time": 0.015591144561768,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #68 ('30.04.2000', 'dd.mm.yyyy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #68 ('30.04.2000', 'dd.mm.yyyy', true)",
+    "status": "pass",
+    "time": 0.020747900009155,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #69 ('31.04.2000', 'dd.mm.yyyy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #69 ('31.04.2000', 'dd.mm.yyyy', false)",
+    "status": "pass",
+    "time": 0.01755690574646,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #70 ('01\/01\/2000', 'dd.mm.yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #70 ('01\/01\/2000', 'dd.mm.yy', false)",
+    "status": "pass",
+    "time": 0.017683982849121,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #71 ('01\/01\/00', 'dd.mm.yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #71 ('01\/01\/00', 'dd.mm.yy', false)",
+    "status": "pass",
+    "time": 0.016567945480347,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #72 ('01-01-2000', 'dd.mm.yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #72 ('01-01-2000', 'dd.mm.yy', false)",
+    "status": "pass",
+    "time": 0.018590927124023,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #73 ('01-01-00', 'dd.mm.yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #73 ('01-01-00', 'dd.mm.yy', false)",
+    "status": "pass",
+    "time": 0.016152143478394,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #74 ('01.01.2000', 'dd.mm.yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #74 ('01.01.2000', 'dd.mm.yy', false)",
+    "status": "pass",
+    "time": 0.019995927810669,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #75 ('01.01.00', 'dd.mm.yy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #75 ('01.01.00', 'dd.mm.yy', true)",
+    "status": "pass",
+    "time": 0.018327951431274,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #76 ('00.01.00', 'dd.mm.yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #76 ('00.01.00', 'dd.mm.yy', false)",
+    "status": "pass",
+    "time": 0.020165205001831,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #77 ('32.01.00', 'dd.mm.yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #77 ('32.01.00', 'dd.mm.yy', false)",
+    "status": "pass",
+    "time": 0.017603874206543,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #78 ('01.00.00', 'dd.mm.yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #78 ('01.00.00', 'dd.mm.yy', false)",
+    "status": "pass",
+    "time": 0.016187191009521,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #79 ('01.13.00', 'dd.mm.yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #79 ('01.13.00', 'dd.mm.yy', false)",
+    "status": "pass",
+    "time": 0.017460107803345,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #80 ('29.02.00', 'dd.mm.yy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #80 ('29.02.00', 'dd.mm.yy', true)",
+    "status": "pass",
+    "time": 0.019186973571777,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #81 ('29.02.01', 'dd.mm.yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #81 ('29.02.01', 'dd.mm.yy', false)",
+    "status": "pass",
+    "time": 0.017495155334473,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #82 ('30.04.00', 'dd.mm.yy', true)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #82 ('30.04.00', 'dd.mm.yy', true)",
+    "status": "pass",
+    "time": 0.019733905792236,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #83 ('31.04.00', 'dd.mm.yy', false)"
+}{
+    "event": "test",
+    "suite": "N8G\\Utils\\Tests\\ValidationTest::testDate",
+    "test": "N8G\\Utils\\Tests\\ValidationTest::testDate with data set #83 ('31.04.00', 'dd.mm.yy', false)",
+    "status": "pass",
+    "time": 0.015381097793579,
+    "trace": [],
+    "message": "",
+    "output": ""
+}

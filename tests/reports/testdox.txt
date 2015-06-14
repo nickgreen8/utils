@@ -1,0 +1,34 @@
+N8G\Utils\Tests\Config
+ [x] Init
+ [x] Set item
+ [x] Get item
+ [x] In config
+ [x] Generic setter
+ [x] Generic getter
+ [x] Clear
+ [x] Failed getter
+ [x] Failed generic getter
+ [x] Static callback
+
+N8G\Utils\Tests\Json
+ [x] File exists
+ [ ] Read file
+ [x] Write to file
+ [x] Write to file with object
+ [x] Validate json
+
+N8G\Utils\Tests\Log
+ [x] Init
+ [x] Fatal
+ [x] Error
+ [x] Warning
+ [x] Notice
+ [x] Info
+ [x] Debug
+ [x] Success
+ [x] Reset
+
+N8G\Utils\Tests\Validation
+ [x] Email
+ [x] Date
+
