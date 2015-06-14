@@ -1,8 +1,13 @@
 <?php
-namespace N8G\Utils\Tests;
+namespace N8G\Utils;
 
 use N8G\Utils\Log;
 
+/**
+ * Unit tests for the Log class.
+ *
+ * @author Nick Green <nick-green@live.co.uk>
+ */
 class LogTest extends \PHPUnit_Framework_TestCase
 {
 	/**

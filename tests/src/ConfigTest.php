@@ -1,9 +1,14 @@
 <?php
-namespace N8G\Utils\Tests;
+namespace N8G\Utils;
 
 use N8G\Utils\Config,
 	N8G\Utils\Log;
 
+/**
+ * Unit tests for the Config class.
+ *
+ * @author Nick Green <nick-green@live.co.uk>
+ */
 class ConfigTest extends \PHPUnit_Framework_TestCase
 {
 	/**
