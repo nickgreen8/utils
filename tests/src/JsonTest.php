@@ -1,9 +1,19 @@
 <?php
+//Allows the control of the mock global variable
 namespace {
 	$mock = false;
 }
 
 namespace N8G\Utils {
+	/**
+	 * This is an override for this namespace ONLY! This will therefore allow me to dictate
+	 * the return value of the function within the tests to foce the code into certain
+	 * scenarios. If the function is called from within this namespace, whether the mock
+	 * value should be returned or not is checked before returning that value or the result
+	 * of the actual function call.
+	 *
+	 * @return mixed The mocked return value or the actual function result
+	 */
 	function fopen() {
 		global $mock;
 		if (isset($mock) && $mock === true) {
@@ -16,6 +26,11 @@ namespace N8G\Utils {
 use N8G\Utils\Json,
 	N8G\Utils\Log;
 
+/**
+ * Unit tests for the Json class.
+ *
+ * @author Nick Green <nick-green@live.co.uk>
+ */
 class JsonTest extends \PHPUnit_Framework_TestCase
 {
 	/**

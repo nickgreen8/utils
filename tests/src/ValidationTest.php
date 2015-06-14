@@ -3,6 +3,11 @@ namespace N8G\Utils;
 
 use N8G\Utils\Validation;
 
+/**
+ * Unit tests for the Validation class.
+ *
+ * @author Nick Green <nick-green@live.co.uk>
+ */
 class ValidationTest extends \PHPUnit_Framework_TestCase
 {
 	// Tests
