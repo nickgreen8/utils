@@ -23,47 +23,4 @@ abstract class ExceptionAbstract extends \Exception
 	{
 		parent::__construct($message, $code, $previous);
 	}
-
-	/**
-	 * This function logs the errors in the relevent log. This means that the behaviour of the
-	 * system can be monitored. Any errors that are thrown up can be investigated quickly and
-	 * easily.
-	 *
-	 * @return void
-	 */
-	protected function log()
-	{
-		//Write to log
-		$message = sprintf('Exception Thrown:  %s%s        Message:  %s%s        File:     %s%s        Line:     %s%s        Trace:    %s',
-							str_replace('Exceptions\\', '', get_class($this)),
-							Log::LOG_SPACING,
-							$this->getMessage(),
-							Log::LOG_SPACING,
-							$this->getFile(),
-							Log::LOG_SPACING,
-							$this->getLine(),
-							Log::LOG_SPACING,
-							$this->getTraceAsString());
-
-		switch ($this->getCode()) {
-			case Log::FATAL :
-				Log::fatal($message);
-				break;
-			case Log::ERROR :
-				Log::error($message);
-				break;
-			case Log::WARN :
-				Log::warn($message);
-				break;
-			case Log::NOTICE :
-				Log::notice($message);
-				break;
-			case Log::INFO :
-				Log::info($message);
-				break;
-			case Log::DEBUG :
-				Log::debug($message);
-				break;
-		}
-	}
 }

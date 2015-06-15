@@ -33,9 +33,6 @@ class ExceptionTest extends \PHPUnit_Framework_TestCase
 
 	// Tests
 
-	public function testAbstract()
-	{}
-
 	public function testDefaultConfigException()
 	{
 		$this->setExpectedException('N8G\Utils\Exceptions\ConfigException', 'This is a test', 3, null);
