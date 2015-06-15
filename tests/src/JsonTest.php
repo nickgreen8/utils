@@ -1,7 +1,8 @@
 <?php
 //Allows the control of the mock global variable
 namespace {
-	$mock = false;
+	$mockFOpen = false;
+	$mockFWrite = false;
 }
 
 namespace N8G\Utils {
@@ -15,11 +16,25 @@ namespace N8G\Utils {
 	 * @return mixed The mocked return value or the actual function result
 	 */
 	function fopen() {
-		global $mock;
-		if (isset($mock) && $mock === true) {
+		global $mockFOpen;
+		if (isset($mockFOpen) && $mockFOpen === true) {
 			return false;
 		} else {
 			return call_user_func_array('\fopen', func_get_args());
+		}
+	}
+
+	/**
+	 * Same as above. This is a mock function to simulate the fwrite function failing.
+	 *
+	 * @return mixed The mocked return value or the actual function result
+	 */
+	function fwrite() {
+		global $mockFWrite;
+		if (isset($mockFWrite) && $mockFWrite === true) {
+			return false;
+		} else {
+			return call_user_func_array('\fwrite', func_get_args());
 		}
 	}
 
@@ -99,8 +114,8 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 				case 'cantOpenFile' :
 					$this->setExpectedException('N8G\Utils\Exceptions\JsonException', 'Could not open file!');
 
-					global $mock;  
-					$mock = true;
+					global $mockFOpen;  
+					$mockFOpen = true;
 					break;
 				case 'invalid' :
 					$this->setExpectedException('N8G\Utils\Exceptions\JsonException', 'The JSON found is invalid.');
@@ -131,15 +146,25 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 	 * @test
 	 * @dataProvider writeProvider
 	 *
-	 * @param  mixed   $value    The value of the JSON as either a string or an array.
-	 * @param  string  $file     The file name for the new file
-	 * @param  boolean $expected Indicates whether the test should pass or not.
+	 * @param  mixed   $value     The value of the JSON as either a string or an array.
+	 * @param  string  $file      The file name for the new file
+	 * @param  string  $error     A string to detemine an expected error
 	 * @return void
 	 */
-	public function testWriteToFile($value, $file, $expected)
+	public function testWriteToFile($value, $file, $error)
 	{
-		if ($expected === false) {
-			$this->setExpectedException('N8G\Utils\Exceptions\JsonException');
+		if ($error === 'invalid json') {
+			$this->setExpectedException('N8G\Utils\Exceptions\JsonException', 'The JSON specified is invalid.');
+		} elseif ($error === 'file open') {
+			global $mockFOpen;
+			$mockFOpen = true;
+
+			$this->setExpectedException('N8G\Utils\Exceptions\JsonException', 'Could not open file!');
+		} elseif ($error === 'file write') {
+			global $mockFWrite;
+			$mockFWrite = true;
+
+			$this->setExpectedException('N8G\Utils\Exceptions\JsonException', 'The data could not be written to file!');
 		}
 
 		$outcome = Json::writeToFile($value, $file);
@@ -240,32 +265,42 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 			array(
 				'value'		=>	'{ "test": "This is a test" }',
 				'file'		=>	'./tests/fixtures/json/write/test1.json',
-				'expected'	=>	true
+				'error'		=>	'no error'
+			),
+			array(
+				'value'		=>	'{ "test": "This is a test" }',
+				'file'		=>	'./tests/fixtures/json/write/test1.json',
+				'error'		=>	'file open'
+			),
+			array(
+				'value'		=>	'{ "test": "This is a test" }',
+				'file'		=>	'./tests/fixtures/json/write/test1.json',
+				'error'		=>	'file write'
 			),
 			array(
 				'value'		=>	'Testing',
 				'file'		=>	'./tests/fixtures/json/write/test2.json',
-				'expected'	=>	false
+				'error'		=>	'invalid json'
 			),
 			array(
 				'value'		=>	array("Test" => "This is another test"),
 				'file'		=>	'./tests/fixtures/json/write/test3.json',
-				'expected'	=>	true
+				'error'		=>	'no error'
 			),
 			array(
 				'value'		=>	array(1, '2', 3.00, true, false, null),
 				'file'		=>	'./tests/fixtures/json/write/test4.json',
-				'expected'	=>	true
+				'error'		=>	'no error'
 			),
 			array(
 				'value'		=>	array(),
 				'file'		=>	'./tests/fixtures/json/write/test5.json',
-				'expected'	=>	true
+				'error'		=>	'no error'
 			),
 			array(
 				'value'		=>	null,
 				'file'		=>	'./tests/fixtures/json/write/test6.json',
-				'expected'	=>	false
+				'error'		=>	'invalid json'
 			)
 		);
 	}
