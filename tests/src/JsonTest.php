@@ -40,6 +40,11 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 	{
 		date_default_timezone_set('Europe/London');
 		Log::init('tests/fixtures/logs/', 'jsonTests.log');
+
+		//Create directories if they don't exist
+		if (!is_dir('./tests/fixtures/json/write/')) {
+			mkdir('./tests/fixtures/json/write/');
+		}
 	}
 
 	/**
