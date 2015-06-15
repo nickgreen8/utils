@@ -34,6 +34,7 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 	public static function tearDownAfterClass()
 	{
 		Log::reset();
+		exec('[ -d "tests/fixtures/logs/" ] && rm -r tests/fixtures/logs/');
 	}
 
 	// Tests
@@ -238,6 +239,53 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 		$this->setExpectedException('N8G\Utils\Exceptions\ConfigException', 'Invalid function called.');
 
 		Config::$key($value);
+	}
+
+	/**
+	 * Tests that the get data function works as expected.
+	 *
+	 * @test
+	 * @depends testInit
+	 *
+	 * @return void
+	 */
+	public function testGetData($config)
+	{
+		$this->assertEmpty($config->getData());
+
+		Config::setTest('This is a test');
+
+		$this->assertArrayHasKey('test', $config->getData());
+		$this->assertContains('This is a test', $config->getData());
+		$this->assertEquals('This is a test', $config->getData()['test']);
+
+		Config::setInTest(true);
+
+		$this->assertArrayHasKey('in-test', $config->getData());
+		$this->assertContains(true, $config->getData());
+		$this->assertEquals(true, $config->getData()['in-test']);
+	}
+
+	/**
+	 * Tests that the size function works as expected. This should return the number of
+	 * records held within the config class.
+	 *
+	 * @test
+	 * @depends testInit
+	 *
+	 * @return void
+	 */
+	public function testSize($config)
+	{
+		$this->assertEquals(0, $config->size());
+
+		Config::setTest('This is a test');
+
+		$this->assertEquals(1, $config->size());
+
+		Config::setInTest(true);
+
+		$this->assertEquals(2, $config->size());
 	}
 
 	// Data providers

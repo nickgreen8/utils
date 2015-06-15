@@ -14,22 +14,6 @@ use N8G\Utils\Exceptions\ExceptionAbstract,
  */
 class ExceptionTest extends \PHPUnit_Framework_TestCase
 {
-	/**
-	 * Sets up the test class.
-	 */
-	public static function setUpBeforeClass()
-	{
-		date_default_timezone_set('Europe/London');
-		Log::init('tests/fixtures/logs/', 'configTests.log');
-	}
-
-	/**
-	 * Cleans up after all tests
-	 */
-	public static function tearDownAfterClass()
-	{
-		Log::reset();
-	}
 
 	// Tests
 

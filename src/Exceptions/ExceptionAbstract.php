@@ -1,8 +1,6 @@
 <?php
 namespace N8G\Utils\Exceptions;
 
-use N8G\Utils\Log;
-
 /**
  * This is an abstract class that should be extended by all exceptions. The class extends the
  * PHP exception class. The class contains generic functionality that is required in the custom

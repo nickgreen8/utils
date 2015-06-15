@@ -54,6 +54,7 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 	{
 		Log::reset();
 		exec('[ -d "tests/fixtures/json/write/" ] && rm -r tests/fixtures/json/write/*');
+		exec('[ -d "tests/fixtures/logs/" ] && rm -r tests/fixtures/logs/');
 	}
 
 	// Tests
