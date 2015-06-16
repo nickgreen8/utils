@@ -42,6 +42,7 @@ class Log
 	 * This is the default constructor. The directory to put the files as well as the
 	 * name of the file.
 	 *
+	 * @codeCoverageIgnore
 	 * @param string $directory The folder to put the log files
 	 * @param string $filename  The name of the file to create
 	 */
@@ -53,10 +54,13 @@ class Log
 
 	/**
 	 * Closes the file if needed.
+	 *
+	 * @codeCoverageIgnore
 	 */
 	public function __destruct()
 	{
-		if (self::$file !== null) {
+		//Check that a file has been created
+		if (self::$file !== null && is_resource(self::$file) && get_resource_type(self::$file) === 'stream') {
 			fclose(self::$file);
 		}
 	}
@@ -79,7 +83,7 @@ class Log
 
 		//Check that the file has been created
 		if (self::$file === null) {
-			self::$file = self::createFile($directory, $filename);
+			self::$file = self::$instance->createFile($directory, $filename);
 		}
 
 		//Return the instance of the class
@@ -95,7 +99,7 @@ class Log
 	 * @param  string $filename  The name of the file
 	 * @return void
 	 */
-	private static function createFile($directory, $filename)
+	private function createFile($directory, $filename)
 	{
 		//Create file name if there is none
 		if ($filename === NULL) {
@@ -113,7 +117,7 @@ class Log
 		//Check the directory is writeable
 		if (!is_writeable($directory)) {
 			//Change the directory perms
-			if (chmod($directory, 0777, true)) {
+			if (!chmod($directory, 0777)) {
 				//If there is an error, throw exception
 				throw new LogException('The directoy is not writeable');
 			}
@@ -134,10 +138,10 @@ class Log
 	 * @param  string $msg The message to be written to the file
 	 * @return void
 	 */
-	private static function writeToFile($cat, $msg)
+	private function writeToFile($cat, $msg)
 	{
 		//check if the class has been initiated
-		self::init();
+		$log = self::init();
 
 		//Format message
 		if (is_bool($msg) && $msg === true) {
@@ -152,7 +156,7 @@ class Log
 			$message = sprintf(
 				'{%s} %s - %s%s',
 				date('d\/m\/Y H:i:s'),
-				self::getCategory($cat),
+				$log->getCategory($cat),
 				$msg,
 				PHP_EOL
 			);
@@ -169,7 +173,7 @@ class Log
 	 * @param  int    $cat The constant for the log message category
 	 * @return string      The string for the category part of the the log message
 	 */
-	private static function getCategory($cat)
+	private function getCategory($cat)
 	{
 		switch ($cat) {
 			case self::FATAL :
@@ -193,6 +197,9 @@ class Log
 			case self::SUCCESS :
 				$category = "\033[0;32m\033[1mSUCCESS";
 				break;
+			default :
+				throw new LogException(sprintf('An undefined category specified: %s', $cat));
+				break;
 		}
 		return $category . "\033[0m";
 	}
@@ -205,7 +212,7 @@ class Log
 	 */
 	public static function fatal($msg)
 	{
-		self::writeToFile(self::FATAL, $msg);
+		self::$instance->writeToFile(self::FATAL, $msg);
 	}
 
 	/**
@@ -216,7 +223,7 @@ class Log
 	 */
 	public static function error($msg)
 	{
-		self::writeToFile(self::ERROR, $msg);
+		self::$instance->writeToFile(self::ERROR, $msg);
 	}
 
 	/**
@@ -227,7 +234,7 @@ class Log
 	 */
 	public static function warn($msg)
 	{
-		self::writeToFile(self::WARN, $msg);
+		self::$instance->writeToFile(self::WARN, $msg);
 	}
 
 	/**
@@ -238,7 +245,7 @@ class Log
 	 */
 	public static function notice($msg)
 	{
-		self::writeToFile(self::NOTICE, $msg);
+		self::$instance->writeToFile(self::NOTICE, $msg);
 	}
 
 	/**
@@ -249,7 +256,7 @@ class Log
 	 */
 	public static function info($msg)
 	{
-		self::writeToFile(self::INFO, $msg);
+		self::$instance->writeToFile(self::INFO, $msg);
 	}
 
 	/**
@@ -260,7 +267,7 @@ class Log
 	 */
 	public static function debug($msg)
 	{
-		self::writeToFile(self::DEBUG, $msg);
+		self::$instance->writeToFile(self::DEBUG, $msg);
 	}
 
 	/**
@@ -271,7 +278,7 @@ class Log
 	 */
 	public static function success($msg)
 	{
-		self::writeToFile(self::SUCCESS, $msg);
+		self::$instance->writeToFile(self::SUCCESS, $msg);
 	}
 
 	/**
@@ -282,7 +289,7 @@ class Log
 	 */
 	public static function custom($msg)
 	{
-		self::writeToFile(self::CUSTOM, $msg);
+		self::$instance->writeToFile(self::CUSTOM, $msg);
 	}
 
 	/**
@@ -293,7 +300,7 @@ class Log
 	public static function reset()
 	{
 		//Close the file
-		if (self::$file !== null) {
+		if (self::$file !== null && is_resource(self::$file) && get_resource_type(self::$file) === 'stream') {
 			fclose(self::$file);
 		}
 		//Reset the file property

@@ -10,6 +10,14 @@ use N8G\Utils\Validation;
  */
 class ValidationTest extends \PHPUnit_Framework_TestCase
 {
+	/**
+	 * Sets up the test class.
+	 */
+	public static function setUpBeforeClass()
+    {
+    	date_default_timezone_set('Europe/London');
+    }
+
 	// Tests
 
 	/**
