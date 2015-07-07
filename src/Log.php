@@ -90,6 +90,8 @@ class Log
 		return self::$instance;
 	}
 
+// Private functions
+
 	/**
 	 * This function is used to setup or create the holding folder and the log file.
 	 * The directory of the file is passed and if it does not exist, it is created.
@@ -154,8 +156,9 @@ class Log
 
 		if ($cat !== self::CUSTOM) {
 			$message = sprintf(
-				'{%s} %s - %s%s',
+				'%s [IP: %s] %s - %s%s',
 				date('d\/m\/Y H:i:s'),
+				$this->getRemoteIp(),
 				$log->getCategory($cat),
 				$msg,
 				PHP_EOL
@@ -203,6 +206,30 @@ class Log
 		}
 		return $category . "\033[0m";
 	}
+
+	/**
+	 * This functions gets and formats the remote IP of the client making the call to the server.
+	 *
+	 * @return string The formatted IP string
+	 */
+	private function getRemoteIp()
+	{
+		//Get the IP
+		$ip = isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '';
+
+		//Check the length of the IP
+		if (strlen($ip) < 15) {
+			//Add additional spaces to ensure all strings are the same length
+			for ($i = 15 - strlen($ip); $i > 0; $i--) {
+				$ip .= ' ';
+			}
+		}
+
+		//Return the IP
+		return $ip;
+	}
+
+// Public functions
 
 	/**
 	 * This method is used to log a fatal error.

@@ -49,7 +49,7 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 	public function testInit()
 	{
 		$config = Config::init();
-		$this->assertRegExp("/.*?\{\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2}\}.*INFO.*\- Initilising config class.*?/", file_get_contents('./tests/fixtures/logs/configTests.log'));
+		$this->assertRegExp("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*INFO.*\- Initilising config class.*?/", file_get_contents('./tests/fixtures/logs/configTests.log'));
 		$this->assertEmpty($config->getData());
 
 		//Return instance of the config class

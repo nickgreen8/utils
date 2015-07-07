@@ -151,7 +151,7 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	public function testFatal($text)
 	{
 		Log::fatal($text);
-		$this->assertRegExp(sprintf("/.*?\{\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2}\}.*FATAL.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
+		$this->assertRegExp(sprintf("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*FATAL.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
 	/**
@@ -166,7 +166,7 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	public function testError($text)
 	{
 		Log::error($text);
-		$this->assertRegExp(sprintf("/.*?\{\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2}\}.*ERROR.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
+		$this->assertRegExp(sprintf("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*ERROR.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
 	/**
@@ -181,7 +181,7 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	public function testWarning($text)
 	{
 		Log::warn($text);
-		$this->assertRegExp(sprintf("/.*?\{\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2}\}.*WARNING.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
+		$this->assertRegExp(sprintf("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*WARNING.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
 	/**
@@ -196,7 +196,7 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	public function testNotice($text)
 	{
 		Log::notice($text);
-		$this->assertRegExp(sprintf("/.*?\{\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2}\}.*NOTICE.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
+		$this->assertRegExp(sprintf("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*NOTICE.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
 	/**
@@ -211,7 +211,7 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	public function testInfo($text)
 	{
 		Log::info($text);
-		$this->assertRegExp(sprintf("/.*?\{\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2}\}.*INFO.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
+		$this->assertRegExp(sprintf("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*INFO.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
 	/**
@@ -226,7 +226,7 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	public function testDebug($text)
 	{
 		Log::debug($text);
-		$this->assertRegExp(sprintf("/.*?\{\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2}\}.*DEBUG.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
+		$this->assertRegExp(sprintf("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*DEBUG.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
 	/**
@@ -241,7 +241,7 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	public function testSuccess($text)
 	{
 		Log::success($text);
-		$this->assertRegExp(sprintf("/.*?\{\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2}\}.*SUCCESS.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
+		$this->assertRegExp(sprintf("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*SUCCESS.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
 	/**
