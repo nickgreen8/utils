@@ -118,11 +118,8 @@ class Log
 
 		//Check the directory is writeable
 		if (!is_writeable($directory)) {
-			//Change the directory perms
-			if (!chmod($directory, 0777)) {
-				//If there is an error, throw exception
-				throw new LogException('The directoy is not writeable');
-			}
+			//If there is an error, throw exception
+			throw new LogException('The directoy is not writeable');
 		}
 
 		//Check the files exists
