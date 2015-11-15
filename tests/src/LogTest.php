@@ -4,7 +4,6 @@ namespace {
 	$mockIsDir = false;
 	$mockMkdir = false;
 	$mockIsWritable = false;
-	$mockChmod = false;
 }
 
 namespace N8G\Utils {
@@ -49,19 +48,6 @@ namespace N8G\Utils {
 			return false;
 		} else {
 			return call_user_func_array('\is_writeable', func_get_args());
-		}
-	}
-	/**
-	 * Same as above. This is a mock function to simulate the chmod function failing.
-	 *
-	 * @return mixed The mocked return value or the actual function result
-	 */
-	function chmod() {
-		global $mockChmod;
-		if (isset($mockChmod) && $mockChmod === true) {
-			return false;
-		} else {
-			return call_user_func_array('\chmod', func_get_args());
 		}
 	}
 
@@ -312,13 +298,6 @@ class LogTest extends \PHPUnit_Framework_TestCase
 
 				$this->setExpectedException('N8G\Utils\Exceptions\LogException', 'Log file not created');
 				break;
-			case 'chmod' :
-				global $mockIsWritable, $mockChmod;
-				$mockIsWritable = true;
-				$mockChmod = true;
-
-				$this->setExpectedException('N8G\Utils\Exceptions\LogException', 'The directoy is not writeable');
-				break;
 			case 'fopen' :
 				global $mockFOpen;
 				$mockFOpen = true;
@@ -334,26 +313,6 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	}
 
 	/**
-	 * This test ensures that a file can be created in a none writable folder.
-	 *
-	 * @test
-	 *
-	 * @return void
-	 */
-	public function testCreateFileChangesMode()
-	{
-		//Create a read only folder
-		mkdir('./tests/fixtures/logs/readonly/', 0444);
-
-		//Perfomrm the action
-		$log = Log::init();
-		Log::reset();
-		$this->invokeMethod($log, 'createFile', array('directory' => './tests/fixtures/logs/readonly/', 'file' => 'created.log'));
-
-		$this->assertFileExists('./tests/fixtures/logs/readonly/created.log');
-	}
-
-	/**
 	 * Tests that the write to file function writes in the expected format.
 	 *
 	 * @test
@@ -361,7 +320,16 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	 * @return void
 	 */
 	public function testWriteToFile()
-	{}
+	{
+		global $mockIsWritable;
+		$mockIsWritable = true;
+
+		$this->setExpectedException('N8G\Utils\Exceptions\LogException', 'The directoy is not writeable');
+
+		$log = Log::init();
+		Log::reset();
+		$this->invokeMethod($log, 'createFile', array('directory' => './tests/fixtures/logs/', 'file' => 'fail.log'));
+	}
 
 	/**
 	 * This function checks that the right category is returned. This should be the
@@ -441,11 +409,6 @@ class LogTest extends \PHPUnit_Framework_TestCase
 				'directory'	=>	'./tests/fixtures/logs/',
 				'file'		=>	'fail.log',
 				'error'		=>	'mkdir'
-			),
-			array(
-				'directory'	=>	'./tests/fixtures/logs/',
-				'file'		=>	'fail.log',
-				'error'		=>	'chmod'
 			),
 			array(
 				'directory'	=>	'./tests/fixtures/logs/',
