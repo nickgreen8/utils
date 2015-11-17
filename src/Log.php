@@ -112,19 +112,19 @@ class Log
 		if (!is_dir($directory)) {
 			if (!mkdir($directory, 0777, true)) {
 				//If there is an error, throw exception
-				throw new LogException('Log file not created');
+				throw new LogException(sprintf('Log directory (%s) could not be created.', $directory));
 			}
 		}
 
 		//Check the directory is writeable
 		if (!is_writeable($directory)) {
 			//If there is an error, throw exception
-			throw new LogException('The directoy is not writeable');
+			throw new LogException(sprintf('The directory (%s) is not writeable.', $directory));
 		}
 
 		//Check the files exists
 		if (false === self::$file = fopen($directory . $filename, 'a')) {
-			throw new LogException('Could not create log file!');
+			throw new LogException(sprintf('Could not create log file! (%s)', $directory . $filename));
 		}
 		return self::$file;
 	}

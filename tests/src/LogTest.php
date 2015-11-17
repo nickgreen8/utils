@@ -296,7 +296,7 @@ class LogTest extends \PHPUnit_Framework_TestCase
 				$mockIsDir = true;
 				$mockMkdir = true;
 
-				$this->setExpectedException('N8G\Utils\Exceptions\LogException', 'Log file not created');
+				$this->setExpectedException('N8G\Utils\Exceptions\LogException', 'Log directory (./tests/fixtures/logs/) could not be created.');
 				break;
 			case 'fopen' :
 				global $mockFOpen;
@@ -324,7 +324,7 @@ class LogTest extends \PHPUnit_Framework_TestCase
 		global $mockIsWritable;
 		$mockIsWritable = true;
 
-		$this->setExpectedException('N8G\Utils\Exceptions\LogException', 'The directoy is not writeable');
+		$this->setExpectedException('N8G\Utils\Exceptions\LogException', 'The directory (./tests/fixtures/logs/) is not writeable.');
 
 		$log = Log::init();
 		Log::reset();
