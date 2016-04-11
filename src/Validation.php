@@ -16,7 +16,7 @@ class Validation
 	 * @param  string  $email The e-mail address to be validated
 	 * @return boolean        The result of the validation
 	 */
-	public static function isEmail($email)
+	public function isEmail($email)
 	{
 		if (preg_match("/^[A-Za-z0-9\.\-\_\%\+]+@[A-Za-z0-9\-\_\%\+]+\.(?:[a-z]{2,4}\.)?[a-z]{2,4}$/u", trim($email), $output)) {
 			//return match
@@ -35,7 +35,7 @@ class Validation
 	 * @param  string  $format The format of the date that should be validated.
 	 * @return boolean         The result of the validation
 	 */
-	public static function isDate($date, $format = 'dd/mm/yyyy')
+	public function isDate($date, $format = 'dd/mm/yyyy')
 	{
 		//Select regex
 		switch ($format) {

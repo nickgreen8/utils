@@ -5,7 +5,7 @@ use N8G\Utils\Exceptions\LogException;
 
 /**
  * This function acts as a logging mechinism. This can be used in many situations
- * and on different sites. This is a static class and can be called from anywhere.
+ * and on different sites.
  *
  * @author Nick Green <nick-green@live.co.uk>
  */
@@ -27,30 +27,16 @@ class Log
 	const LOG_SPACING = PHP_EOL;
 
 	/**
-	 * Instance of this class
-	 * @var object
-	 */
-	private static $instance;
-
-	/**
 	 * The file to be written to
 	 * @var pointer
 	 */
-	private static $file;
+	private $file;
 
 	/**
-	 * This is the default constructor. The directory to put the files as well as the
-	 * name of the file.
-	 *
-	 * @codeCoverageIgnore
-	 * @param string $directory The folder to put the log files
-	 * @param string $filename  The name of the file to create
+	 * The log level
+	 * @var int
 	 */
-	private function __construct($directory, $filename)
-	{
-		//set the name of the file
-		self::$file = $this->createFile($directory, $filename);
-	}
+	private $level;
 
 	/**
 	 * Closes the file if needed.
@@ -60,8 +46,8 @@ class Log
 	public function __destruct()
 	{
 		//Check that a file has been created
-		if (self::$file !== null && is_resource(self::$file) && get_resource_type(self::$file) === 'stream') {
-			fclose(self::$file);
+		if ($this->file !== null && is_resource($this->file) && get_resource_type($this->file) === 'stream') {
+			fclose($this->file);
 		}
 	}
 
@@ -73,21 +59,14 @@ class Log
 	 * @param  string $filename  The name of the log file
 	 * @return object            The instance of this class
 	 */
-	public static function init($directory = 'logs/', $filename = null)
+	public function init($directory = 'logs/', $filename = null, $level = 6)
 	{
 		if (substr($directory, -1, 1) !== '/') $directory = $directory . '/';
-		//Check for instance of the class
-		if (self::$instance === null) {
-			self::$instance = new self($directory, $filename);
-		}
 
 		//Check that the file has been created
-		if (self::$file === null) {
-			self::$file = self::$instance->createFile($directory, $filename);
+		if ($this->file === null) {
+			$this->file = $this->createFile($directory, $filename);
 		}
-
-		//Return the instance of the class
-		return self::$instance;
 	}
 
 // Private functions
@@ -123,10 +102,10 @@ class Log
 		}
 
 		//Check the files exists
-		if (false === self::$file = fopen($directory . $filename, 'a')) {
+		if (false === $this->file = fopen($directory . $filename, 'a')) {
 			throw new LogException(sprintf('Could not create log file! (%s)', $directory . $filename));
 		}
-		return self::$file;
+		return $this->file;
 	}
 
 	/**
@@ -139,31 +118,31 @@ class Log
 	 */
 	private function writeToFile($cat, $msg)
 	{
-		//check if the class has been initiated
-		$log = self::init();
+		//Check the log level
+		if ($cat <= $this->level) {
+			//Format message
+			if (is_bool($msg) && $msg === true) {
+				$msg = 'true';
+			} elseif (is_bool($msg) && $msg === false) {
+				$msg = 'false';
+			} elseif ($msg === null) {
+				$msg = 'null';
+			}
 
-		//Format message
-		if (is_bool($msg) && $msg === true) {
-			$msg = 'true';
-		} elseif (is_bool($msg) && $msg === false) {
-			$msg = 'false';
-		} elseif ($msg === null) {
-			$msg = 'null';
+			if ($cat !== self::CUSTOM) {
+				$message = sprintf(
+					'%s [IP: %s] %s - %s%s',
+					date('d\/m\/Y H:i:s'),
+					$this->getRemoteIp(),
+					$log->getCategory($cat),
+					$msg,
+					PHP_EOL
+				);
+			} else {
+				$message = sprintf('%s%s', $msg, PHP_EOL);
+			}
+			fwrite($this->file, $message);
 		}
-
-		if ($cat !== self::CUSTOM) {
-			$message = sprintf(
-				'%s [IP: %s] %s - %s%s',
-				date('d\/m\/Y H:i:s'),
-				$this->getRemoteIp(),
-				$log->getCategory($cat),
-				$msg,
-				PHP_EOL
-			);
-		} else {
-			$message = sprintf('%s%s', $msg, PHP_EOL);
-		}
-		fwrite(self::$file, $message);
 	}
 
 	/**
@@ -234,9 +213,9 @@ class Log
 	 * @param  string $msg The message to be logged
 	 * @return void
 	 */
-	public static function fatal($msg)
+	public function fatal($msg)
 	{
-		self::$instance->writeToFile(self::FATAL, $msg);
+		$this->writeToFile(self::FATAL, $msg);
 	}
 
 	/**
@@ -245,9 +224,9 @@ class Log
 	 * @param  string $msg The message to be logged
 	 * @return void
 	 */
-	public static function error($msg)
+	public function error($msg)
 	{
-		self::$instance->writeToFile(self::ERROR, $msg);
+		$this->writeToFile(self::ERROR, $msg);
 	}
 
 	/**
@@ -256,9 +235,9 @@ class Log
 	 * @param  string $msg The message to be logged
 	 * @return void
 	 */
-	public static function warn($msg)
+	public function warn($msg)
 	{
-		self::$instance->writeToFile(self::WARN, $msg);
+		$this->writeToFile(self::WARN, $msg);
 	}
 
 	/**
@@ -267,9 +246,9 @@ class Log
 	 * @param  string $msg The message to be logged
 	 * @return void
 	 */
-	public static function notice($msg)
+	public function notice($msg)
 	{
-		self::$instance->writeToFile(self::NOTICE, $msg);
+		$this->writeToFile(self::NOTICE, $msg);
 	}
 
 	/**
@@ -278,9 +257,9 @@ class Log
 	 * @param  string $msg The message to be logged
 	 * @return void
 	 */
-	public static function info($msg)
+	public function info($msg)
 	{
-		self::$instance->writeToFile(self::INFO, $msg);
+		$this->writeToFile(self::INFO, $msg);
 	}
 
 	/**
@@ -289,9 +268,9 @@ class Log
 	 * @param  string $msg The message to be logged
 	 * @return void
 	 */
-	public static function debug($msg)
+	public function debug($msg)
 	{
-		self::$instance->writeToFile(self::DEBUG, $msg);
+		$this->writeToFile(self::DEBUG, $msg);
 	}
 
 	/**
@@ -300,9 +279,9 @@ class Log
 	 * @param  string $msg The message to be logged
 	 * @return void
 	 */
-	public static function success($msg)
+	public function success($msg)
 	{
-		self::$instance->writeToFile(self::SUCCESS, $msg);
+		$this->writeToFile(self::SUCCESS, $msg);
 	}
 
 	/**
@@ -311,9 +290,9 @@ class Log
 	 * @param  string $msg The message to be logged
 	 * @return void
 	 */
-	public static function custom($msg)
+	public function custom($msg)
 	{
-		self::$instance->writeToFile(self::CUSTOM, $msg);
+		$this->writeToFile(self::CUSTOM, $msg);
 	}
 
 	/**
@@ -321,14 +300,14 @@ class Log
 	 *
 	 * @return void
 	 */
-	public static function reset()
+	public function reset()
 	{
 		//Close the file
-		if (self::$file !== null && is_resource(self::$file) && get_resource_type(self::$file) === 'stream') {
-			fclose(self::$file);
+		if ($this->file !== null && is_resource($this->file) && get_resource_type($this->file) === 'stream') {
+			fclose($this->file);
 		}
 		//Reset the file property
-		self::$file = null;
+		$this->file = null;
 	}
 
 	// Getters
@@ -340,6 +319,6 @@ class Log
 	 */
 	public function getFile()
 	{
-		return self::$file;
+		return $this->file;
 	}
 }

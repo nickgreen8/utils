@@ -5,46 +5,32 @@ use N8G\Utils\Exceptions\ConfigException;
 
 /**
  * This class acts as a central storage for all config data. This can be used in many
- * situations and on different sites. This is a static class and can be called from
- * anywhere.
+ * situations and on different sites.
  *
  * @author Nick Green <nick-green@live.co.uk>
  */
 class Config
 {
 	/**
-	 * Instance of this class
-	 * @var object
-	 */
-	private static $instance;
-
-	/**
 	 * Array of data to be used as the data store
 	 * @var array
 	 */
-	private static $data;
+	private $data = array();
 
 	/**
-	 * This function is used to initilised the config object. The data is retreved
-	 * from the database and stored within the data array. Nothing is passed and nothing
-	 * is retuned.
-	 *
-	 * @return void
+	 * Element container
+	 * @var object
 	 */
-	public static function init()
+	private $container;
+
+	/**
+	 * Default constructor.
+	 *
+	 * @param [type] $container [description]
+	 */
+	public function __construct($container)
 	{
-		Log::info('Initilising config class');
-
-		//Check for instance of the class
-		if (self::$instance === null) {
-			self::$instance = new self();
-		}
-
-		//Create data array
-		self::$data = array();
-
-		//Return the instance of the class
-		return self::$instance;
+		$this->container = $container;
 	}
 
 	/**
@@ -57,9 +43,9 @@ class Config
 	 */
 	public static function setItem($name, $value)
 	{
-		Log::info(sprintf('Setting Config[\'%s\'] to "%s"', $name, $value));
+		$this->container->get('log')->info(sprintf('Setting Config[\'%s\'] to "%s"', $name, $value));
 		//Set data in config
-		self::$data[$name] = $value;
+		$this->data[$name] = $value;
 	}
 
 	/**
@@ -71,11 +57,11 @@ class Config
 	 */
 	public static function getItem($name)
 	{
-		Log::info(sprintf('Getting Config[\'%s\']', $name));
+		$this->container->get('log')->info(sprintf('Getting Config[\'%s\']', $name));
 		//Check data is stored
-		if (isset(self::$data[$name])) {
+		if (isset($this->data[$name])) {
 			//Return the data
-			return self::$data[$name];
+			return $this->data[$name];
 		}
 		throw new ConfigException('Data item not found.');
 	}
@@ -90,10 +76,10 @@ class Config
 	 */
 	public static function inConfig($name)
 	{
-		Log::info(sprintf('Looking for %s in config', $name));
+		$this->container->get('log')->info(sprintf('Looking for %s in config', $name));
 		//Check for element in config
-		if (isset(self::$data[$name])) {
-			return self::$data[$name];
+		if (isset($this->data[$name])) {
+			return $this->data[$name];
 		}
 		//return default
 		return false;
@@ -106,7 +92,7 @@ class Config
 	 */
 	public static function clear()
 	{
-		self::$data = array();
+		$this->data = array();
 	}
 
 	/**
@@ -118,7 +104,7 @@ class Config
 	 */
 	public static function __callStatic($method, $args)
 	{
-		Log::notice(sprintf('Config function called: %s', $method));
+		$this->container->get('log')->notice(sprintf('Config function called: %s', $method));
 
 		//Calculate the key
 		$name = preg_replace("/^(get|set)/", '', $method);
@@ -134,7 +120,7 @@ class Config
 		if (preg_match("/^get/", $method)) {
 			//Return data requested
 			if (self::inConfig($key)) {
-				return self::$data[$key];
+				return $this->data[$key];
 			}
 			throw new ConfigException('Data item not found.');
 		}
@@ -142,7 +128,7 @@ class Config
 		//Check if it is a set method
 		if (preg_match("/^set/", $method)) {
 			//Set config value
-			self::$data[$key] = $args[0];
+			$this->data[$key] = $args[0];
 			//Return so stop function
 			return;
 		}
@@ -161,7 +147,7 @@ class Config
 	public function getData()
 	{
 		//Return the data array
-		return self::$data;
+		return $this->data;
 	}
 
 	/**
@@ -172,6 +158,6 @@ class Config
 	public function size()
 	{
 		//Return the size of the data array
-		return count(self::$data);
+		return count($this->data);
 	}
 }
