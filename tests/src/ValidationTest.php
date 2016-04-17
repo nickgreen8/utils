@@ -10,14 +10,6 @@ use N8G\Utils\Validation;
  */
 class ValidationTest extends \PHPUnit_Framework_TestCase
 {
-	/**
-	 * Sets up the test class.
-	 */
-	public static function setUpBeforeClass()
-    {
-    	date_default_timezone_set('Europe/London');
-    }
-
 	// Tests
 
 	/**
@@ -35,8 +27,11 @@ class ValidationTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testEmail($email, $expected)
 	{
+		//Create an instance of the validation class
+		$validation = new Validation;
+
 		//Make the function call and store the result
-		$result = Validation::isEmail($email);
+		$result = $validation->isEmail($email);
 
 		//Assert the result is as expected
 		$this->assertEquals($expected, $result);
@@ -59,8 +54,11 @@ class ValidationTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testDate($date, $format, $expected)
 	{
+		//Create an instance of the validation class
+		$validation = new Validation;
+
 		//Make the function call and store the result
-		$result = Validation::isDate($date, $format);
+		$result = $validation->isDate($date, $format);
 
 		//Assert the result is as expected
 		$this->assertEquals($expected, $result);

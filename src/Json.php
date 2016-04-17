@@ -12,22 +12,6 @@ use N8G\Utils\Exceptions\JsonException;
 class Json
 {
 	/**
-	 * Element container
-	 * @var object
-	 */
-	private $container;
-
-	/**
-	 * Default constructor.
-	 *
-	 * @param object $container
-	 */
-	public function __construct($container)
-	{
-		$this->container = $container;
-	}
-
-	/**
 	 * This function is used to check if a file exists. The file location and name
 	 * is passed to the function. A boolean value is then returned indicating
 	 * whether the file exists or not.
@@ -37,14 +21,10 @@ class Json
 	 */
 	public function fileExists($file)
 	{
-		$this->container->get('log')->notice(sprintf('Looking for file: %s', $file));
-
 		if (file_exists($file)) {
-			$this->container->get('log')->success('File found');
 			return true;
 		}
 
-		$this->container->get('log')->error('File not found');
 		return false;
 	}
 
@@ -60,16 +40,13 @@ class Json
 	 */
 	public function readFile($file, $array = false)
 	{
-		$this->container->get('log')->info(sprintf('Getting the data from %s', $file));
-
 		//Check for file
-		if (!self::fileExists($file)) {
+		if (!$this->fileExists($file)) {
 			throw new JsonException('The file specifed cannot be found.');
 		}
 
 		//Check the size of the file
 		if (filesize($file) < 1) {
-			$this->container->get('log')->error('The file size suggests the file is empty');
 			throw new JsonException('The file specifed is empty.');
 		}
 
@@ -82,11 +59,10 @@ class Json
 		fclose($content);
 
 		//Check the JSON is valid
-		if (!self::validate($json)) {
+		if (!$this->validate($json)) {
 			throw new JsonException('The JSON found is invalid.');
 		}
 
-		$this->container->get('log')->success(sprintf('JSON retreived: %s', $json));
 		return json_decode($json, $array);
 	}
 
@@ -101,10 +77,8 @@ class Json
 	 */
 	public function writeToFile($data, $file)
 	{
-		$this->container->get('log')->info('Opening file');
-
 		//Validate JSON
-		if (!self::validate(is_string($data) ? $data : json_encode($data))) {
+		if (!$this->validate(is_string($data) ? $data : json_encode($data))) {
 			throw new JsonException('The JSON specified is invalid.');
 		}
 
@@ -112,14 +86,12 @@ class Json
 		if (false === $file = fopen($file, 'w')) {
 			throw new JsonException('Could not open file!');
 		}
-		$this->container->get('log')->success('File opened');
 
 		//Write to file
 		if (fwrite($file, is_string($data) ? $data : json_encode($data)) === FALSE) {
 			//Throw error
 			throw new JsonException('The data could not be written to file!');
 		}
-		$this->container->get('log')->success('Data written to file');
 
 		//Close the file
 		fclose($file);

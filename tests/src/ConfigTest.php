@@ -1,8 +1,7 @@
 <?php
 namespace N8G\Utils;
 
-use N8G\Utils\Config,
-	N8G\Utils\Log;
+use N8G\Utils\Config;
 
 /**
  * Unit tests for the Config class.
@@ -11,66 +10,24 @@ use N8G\Utils\Config,
  */
 class ConfigTest extends \PHPUnit_Framework_TestCase
 {
-	/**
-	 * Sets up the test class.
-	 */
-	public static function setUpBeforeClass()
-	{
-		date_default_timezone_set('Europe/London');
-		Log::init('tests/fixtures/logs/', 'configTests.log');
-	}
-
-	/**
-	 * Cleans up after each test
-	 */
-	protected function tearDown()
-	{
-		Config::clear();
-	}
-
-	/**
-	 * Cleans up after all tests
-	 */
-	public static function tearDownAfterClass()
-	{
-		Log::reset();
-		exec('[ -d "tests/fixtures/logs/" ] && rm -r tests/fixtures/logs/');
-	}
-
 	// Tests
-
-	/**
-	 * Test that the the config class can be initilised.
-	 *
-	 * @test
-	 *
-	 * @return void
-	 */
-	public function testInit()
-	{
-		$config = Config::init();
-		$this->assertRegExp("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*INFO.*\- Initilising config class.*?/", file_get_contents('./tests/fixtures/logs/configTests.log'));
-		$this->assertEmpty($config->getData());
-
-		//Return instance of the config class
-		return $config;
-	}
 
 	/**
 	 * Test that data can be set in config.
 	 *
 	 * @test
-	 * @depends testInit
 	 * @dataProvider dataProvider
 	 *
 	 * @param  string $key    The key for config data
 	 * @param  mixed  $value  The value of the data
-	 * @param  object $config Instance of the config class
 	 * @return void
 	 */
-	public function testSetItem($key, $value, $config)
+	public function testSetItem($key, $value)
 	{
-		Config::setItem($key, $value);
+		//Create new config object
+		$config = new Config;
+
+		$config->setItem($key, $value);
 
 		$this->assertArrayHasKey($key, $config->getData());
 		$this->assertContains($value, $config->getData());
@@ -81,7 +38,6 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 	 * Test that data can be retrieved.
 	 *
 	 * @test
-	 * @depends testInit
 	 * @dataProvider dataProvider
 	 *
 	 * @param  string $key   The key for config data
@@ -90,8 +46,11 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testGetItem($key, $value)
 	{
-		Config::setItem($key, $value);
-		$data = Config::getItem($key);
+		//Create new config object
+		$config = new Config;
+
+		$config->setItem($key, $value);
+		$data = $config->getItem($key);
 
 		$this->assertEquals($value, $data);
 	}
@@ -100,26 +59,27 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 	 * Test that a check can be made to see if an item is in the config data array.
 	 *
 	 * @test
-	 * @depends testInit
 	 * @dataProvider dataProvider
 	 *
 	 * @param  string $key    The key for config data
 	 * @param  mixed  $value  The value of the data
-	 * @param  object $config Instance of the config class
 	 * @return void
 	 */
-	public function testInConfig($key, $value, $config)
+	public function testInConfig($key, $value)
 	{
-		Config::clear();
+		//Create new config object
+		$config = new Config;
 
-		$inConfig = Config::inConfig($key);
+		$config->clear();
+
+		$inConfig = $config->inConfig($key);
 
 		$this->assertFalse($inConfig);
 
 		$func = sprintf('set%s', ucwords($key));
-		Config::$func($value);
+		$config->$func($value);
 
-		$inConfig = Config::inConfig($key);
+		$inConfig = $config->inConfig($key);
 
 		$this->assertEquals($value, $inConfig);
 	}
@@ -128,18 +88,19 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 	 * Test that the generic setter works as expected.
 	 *
 	 * @test
-	 * @depends testInit
 	 * @dataProvider dataProvider
 	 *
 	 * @param  string $key    The key for config data
 	 * @param  mixed  $value  The value of the data
-	 * @param  object $config Instance of the config class
 	 * @return void
 	 */
-	public function testGenericSetter($key, $value, $config)
+	public function testGenericSetter($key, $value)
 	{
+		//Create new config object
+		$config = new Config;
+
 		$func = sprintf('set%s', ucwords($key));
-		Config::$func($value);
+		$config->$func($value);
 
 		$this->assertArrayHasKey($key, $config->getData());
 		$this->assertContains($value, $config->getData());
@@ -150,7 +111,6 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 	 * Test that the generic getter works as expected.
 	 *
 	 * @test
-	 * @depends testInit
 	 * @dataProvider dataProvider
 	 *
 	 * @param  string $key   The key for config data
@@ -159,9 +119,12 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testGenericGetter($key, $value)
 	{
-		Config::setItem($key, $value);
+		//Create new config object
+		$config = new Config;
+
+		$config->setItem($key, $value);
 		$func = sprintf('get%s', ucwords($key));
-		$data = Config::$func();
+		$data = $config->$func();
 
 		$this->assertEquals($value, $data);
 	}
@@ -170,20 +133,21 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 	 * Test that the config data can be cleared.
 	 *
 	 * @test
-	 * @depends testInit
 	 * @dataProvider dataProvider
 	 *
 	 * @param  string $key    The key for config data
 	 * @param  mixed  $value  The value of the data
-	 * @param  object $config Instance of the config class
 	 * @return void
 	 */
-	public function testClear($key, $value, $config)
+	public function testClear($key, $value)
 	{
-		$func = sprintf('set%s', ucwords($key));
-		Config::$func($value);
+		//Create new config object
+		$config = new Config;
 
-		Config::clear();
+		$func = sprintf('set%s', ucwords($key));
+		$config->$func($value);
+
+		$config->clear();
 
 		$this->assertEmpty($config->getdata());
 	}
@@ -199,9 +163,12 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testFailedGetter($key)
 	{
+		//Create new config object
+		$config = new Config;
+
 		$this->setExpectedException('N8G\Utils\Exceptions\ConfigException', 'Data item not found.');
 
-		Config::getItem($key);
+		$config->getItem($key);
 	}
 
 	/**
@@ -216,10 +183,13 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testFailedGenericGetter($key)
 	{
+		//Create new config object
+		$config = new Config;
+
 		$this->setExpectedException('N8G\Utils\Exceptions\ConfigException', 'Data item not found.');
 
 		$func = sprintf('get%s', ucwords($key));
-		$data = Config::$func();
+		$data = $config->$func();
 	}
 
 	/**
@@ -234,32 +204,37 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 	 * @param  mixed  $value The value of the data
 	 * @return void
 	 */
-	public function testStaticCallback($key, $value)
+	public function testCallback($key, $value)
 	{
+		//Create new config object
+		$config = new Config;
+
 		$this->setExpectedException('N8G\Utils\Exceptions\ConfigException', 'Invalid function called.');
 
-		Config::$key($value);
+		$config->$key($value);
 	}
 
 	/**
 	 * Tests that the get data function works as expected.
 	 *
 	 * @test
-	 * @depends testInit
 	 *
 	 * @return void
 	 */
-	public function testGetData($config)
+	public function testGetData()
 	{
+		//Create new config object
+		$config = new Config;
+
 		$this->assertEmpty($config->getData());
 
-		Config::setTest('This is a test');
+		$config->setTest('This is a test');
 
 		$this->assertArrayHasKey('test', $config->getData());
 		$this->assertContains('This is a test', $config->getData());
 		$this->assertEquals('This is a test', $config->getData()['test']);
 
-		Config::setInTest(true);
+		$config->setInTest(true);
 
 		$this->assertArrayHasKey('in-test', $config->getData());
 		$this->assertContains(true, $config->getData());
@@ -271,19 +246,21 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
 	 * records held within the config class.
 	 *
 	 * @test
-	 * @depends testInit
 	 *
 	 * @return void
 	 */
-	public function testSize($config)
+	public function testSize()
 	{
+		//Create new config object
+		$config = new Config;
+
 		$this->assertEquals(0, $config->size());
 
-		Config::setTest('This is a test');
+		$config->setTest('This is a test');
 
 		$this->assertEquals(1, $config->size());
 
-		Config::setInTest(true);
+		$config->setInTest(true);
 
 		$this->assertEquals(2, $config->size());
 	}

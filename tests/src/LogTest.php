@@ -88,41 +88,43 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	public function testInit()
 	{
 		//Init without arguments
-		$log = Log::init();
+		$log = new Log;
+		$log->init();
 		//Check the file is created
 		$this->assertFileExists(sprintf('logs/%s.log', date('Y-m-d')));
 		//Check what is returned
 		$this->assertInstanceOf('N8G\Utils\Log', $log);
 		//Reset the log and clean up
-		Log::reset();
+		$log->reset();
         exec('rm -r logs/');
 
 		//Init with an existing directory
-		Log::init('tests/fixtures/');
+		$log->init('tests/fixtures/');
 		//Check the file is created
 		$this->assertFileExists(sprintf('tests/fixtures/%s.log', date('Y-m-d')));
 		//Reset the log and clean up
-		Log::reset();
+		$log->reset();
         exec('rm tests/fixtures/*.log');
 
 		//Init with a new directory
-		Log::init('tests/fixtures/logs/');
+		$log->init('tests/fixtures/logs/');
 		//Check the file is created
 		$this->assertFileExists(sprintf('tests/fixtures/logs/%s.log', date('Y-m-d')));
 		//Reset the log
-		Log::reset();
+		$log->reset();
 
 		//Init with directory with no slash
-		Log::init('tests/fixtures/logs', 'test.log');
+		$log->init('tests/fixtures/logs', 'test.log');
 		//Check the file is created
 		$this->assertFileExists('tests/fixtures/logs/test.log');
 		//Reset the log
-		Log::reset();
+		$log->reset();
 
 		//Init with directory and filename
-		$instance = Log::init('tests/fixtures/logs/', 'utils.log');
+		$instance = $log->init('tests/fixtures/logs/', 'utils.log');
 		//Check the file is created
 		$this->assertFileExists('tests/fixtures/logs/utils.log');
+		return $log;
 	}
 
 	/**
@@ -134,9 +136,9 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	 *
 	 * @return void
 	 */
-	public function testFatal($text)
+	public function testFatal($text, $log)
 	{
-		Log::fatal($text);
+		$log->fatal($text);
 		$this->assertRegExp(sprintf("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*FATAL.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
@@ -149,9 +151,9 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	 *
 	 * @return void
 	 */
-	public function testError($text)
+	public function testError($text, $log)
 	{
-		Log::error($text);
+		$log->error($text);
 		$this->assertRegExp(sprintf("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*ERROR.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
@@ -164,9 +166,9 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	 *
 	 * @return void
 	 */
-	public function testWarning($text)
+	public function testWarning($text, $log)
 	{
-		Log::warn($text);
+		$log->warn($text);
 		$this->assertRegExp(sprintf("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*WARNING.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
@@ -179,9 +181,9 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	 *
 	 * @return void
 	 */
-	public function testNotice($text)
+	public function testNotice($text, $log)
 	{
-		Log::notice($text);
+		$log->notice($text);
 		$this->assertRegExp(sprintf("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*NOTICE.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
@@ -194,9 +196,9 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	 *
 	 * @return void
 	 */
-	public function testInfo($text)
+	public function testInfo($text, $log)
 	{
-		Log::info($text);
+		$log->info($text);
 		$this->assertRegExp(sprintf("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*INFO.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
@@ -209,9 +211,9 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	 *
 	 * @return void
 	 */
-	public function testDebug($text)
+	public function testDebug($text, $log)
 	{
-		Log::debug($text);
+		$log->debug($text);
 		$this->assertRegExp(sprintf("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*DEBUG.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
@@ -224,9 +226,9 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	 *
 	 * @return void
 	 */
-	public function testSuccess($text)
+	public function testSuccess($text, $log)
 	{
-		Log::success($text);
+		$log->success($text);
 		$this->assertRegExp(sprintf("/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*SUCCESS.*\- %s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
@@ -239,9 +241,9 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	 *
 	 * @return void
 	 */
-	public function testCustom($text)
+	public function testCustom($text, $log)
 	{
-		Log::custom($text);
+		$log->custom($text);
 		$this->assertRegExp(sprintf("/.*?%s.*?/", $text), file_get_contents('./tests/fixtures/logs/utils.log'));
 	}
 
@@ -254,8 +256,9 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testReset()
 	{
-		$log = Log::init();
-		Log::reset();
+		$log = new Log;
+		$log->init();
+		$log->reset();
 
 		//Check that the reset has worked
 		$this->assertNull($log->getFile());
@@ -270,10 +273,9 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testGetFile()
 	{
-		//Reset the log
-		Log::reset();
 		//Initilise
-		$log = Log::init('tests/fixtures/logs/', 'getFile.log');
+		$log = new Log;
+		$log->init('tests/fixtures/logs/', 'getFile.log');
 
 		$this->assertTrue(is_resource($log->getFile()));
 		$this->assertEquals('stream', get_resource_type($log->getFile()));
@@ -307,8 +309,8 @@ class LogTest extends \PHPUnit_Framework_TestCase
 		}
 
 		//Perfomrm the action
-		$log = Log::init();
-		Log::reset();
+		$log = new Log;
+		$log->init();
 		$this->invokeMethod($log, 'createFile', array('directory' => $directory, 'file' => $file));
 	}
 
@@ -326,8 +328,8 @@ class LogTest extends \PHPUnit_Framework_TestCase
 
 		$this->setExpectedException('N8G\Utils\Exceptions\LogException', 'The directory (./tests/fixtures/logs/) is not writeable.');
 
-		$log = Log::init();
-		Log::reset();
+		$log = new Log;
+		$log->init();
 		$this->invokeMethod($log, 'createFile', array('directory' => './tests/fixtures/logs/', 'file' => 'fail.log'));
 	}
 
@@ -342,10 +344,9 @@ class LogTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testGetCategory()
 	{
-		//Reset the log
-		Log::reset();
 		//Initilise
-		$log = Log::init('tests/fixtures/logs/', 'category.log');
+		$log = new Log;
+		$log->init('tests/fixtures/logs/', 'category.log');
 
 		//Fatal
 		$this->assertEquals("\033[1;37m\033[41m FATAL \033[0m", $this->invokeMethod($log, 'getCategory', array('cat' => Log::FATAL)));

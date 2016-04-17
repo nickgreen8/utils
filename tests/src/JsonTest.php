@@ -38,8 +38,7 @@ namespace N8G\Utils {
 		}
 	}
 
-use N8G\Utils\Json,
-	N8G\Utils\Log;
+use N8G\Utils\Json;
 
 /**
  * Unit tests for the Json class.
@@ -53,9 +52,6 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 	 */
 	public static function setUpBeforeClass()
 	{
-		date_default_timezone_set('Europe/London');
-		Log::init('tests/fixtures/logs/', 'jsonTests.log');
-
 		//Create directories if they don't exist
 		if (!is_dir('./tests/fixtures/json/write/')) {
 			mkdir('./tests/fixtures/json/write/');
@@ -67,9 +63,7 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 	 */
 	public static function tearDownAfterClass()
 	{
-		Log::reset();
 		exec('[ -d "tests/fixtures/json/write/" ] && rm -r tests/fixtures/json/write/*');
-		exec('[ -d "tests/fixtures/logs/" ] && rm -r tests/fixtures/logs/');
 	}
 
 	// Tests
@@ -86,7 +80,10 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testFileExists($file, $exists)
 	{
-		$this->assertEquals($exists, Json::fileExists(sprintf('./tests/fixtures/json/read/%s.json', $file)));
+		//Create a new instance of the JSON class
+		$json = new Json;
+
+		$this->assertEquals($exists, $json->fileExists(sprintf('./tests/fixtures/json/read/%s.json', $file)));
 	}
 
 	/**
@@ -101,6 +98,9 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testReadFile($file, $array)
 	{
+		//Create a new instance of the JSON class
+		$json = new Json;
+
 		//Check the file name
 		if ($file !== 'success') {
 			//Set expected message
@@ -124,7 +124,7 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 		}
 
 		//Perform function
-		$json = Json::readFile(sprintf('./tests/fixtures/json/read/%s.json', $file), $array);
+		$json = $json->readFile(sprintf('./tests/fixtures/json/read/%s.json', $file), $array);
 
 		//Check the test should pass
 		if ($file === 'success') {
@@ -153,6 +153,9 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testWriteToFile($value, $file, $error)
 	{
+		//Create a new instance of the JSON class
+		$json = new Json;
+
 		if ($error === 'invalid json') {
 			$this->setExpectedException('N8G\Utils\Exceptions\JsonException', 'The JSON specified is invalid.');
 		} elseif ($error === 'file open') {
@@ -167,7 +170,7 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 			$this->setExpectedException('N8G\Utils\Exceptions\JsonException', 'The data could not be written to file!');
 		}
 
-		$outcome = Json::writeToFile($value, $file);
+		$outcome = $json->writeToFile($value, $file);
 		$this->assertTrue($outcome);
 		$this->assertFileExists($file);
 	}
@@ -181,10 +184,13 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testWriteToFileWithObject()
 	{
+		//Create a new instance of the JSON class
+		$json = new Json;
+
 		$obj = new \stdClass();
 		$obj->test = "This is a test";
 
-		$outcome = Json::writeToFile($obj, './tests/fixtures/json/write/test7.json');
+		$outcome = $json->writeToFile($obj, './tests/fixtures/json/write/test7.json');
 
 		$this->assertTrue($outcome);
 		$this->assertFileExists('./tests/fixtures/json/write/test7.json');
@@ -202,7 +208,10 @@ class JsonTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testValidateJson($value, $expected)
 	{
-		$this->assertEquals($expected, Json::validate($value));
+		//Create a new instance of the JSON class
+		$json = new Json;
+
+		$this->assertEquals($expected, $json->validate($value));
 	}
 
 	// Data providers

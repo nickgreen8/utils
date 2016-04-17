@@ -18,22 +18,6 @@ class Config
 	private $data = array();
 
 	/**
-	 * Element container
-	 * @var object
-	 */
-	private $container;
-
-	/**
-	 * Default constructor.
-	 *
-	 * @param [type] $container [description]
-	 */
-	public function __construct($container)
-	{
-		$this->container = $container;
-	}
-
-	/**
 	 * This function is used to set a new item of data in the config data store. The
 	 * function takes the name and the value of the data. Nothing is returned.
 	 *
@@ -41,9 +25,8 @@ class Config
 	 * @param  mixed  $value The value of the data
 	 * @return void
 	 */
-	public static function setItem($name, $value)
+	public function setItem($name, $value)
 	{
-		$this->container->get('log')->info(sprintf('Setting Config[\'%s\'] to "%s"', $name, $value));
 		//Set data in config
 		$this->data[$name] = $value;
 	}
@@ -55,9 +38,8 @@ class Config
 	 * @param  string $name  The name and the key to the data being stored
 	 * @return mixed         The value attributed to the key passed
 	 */
-	public static function getItem($name)
+	public function getItem($name)
 	{
-		$this->container->get('log')->info(sprintf('Getting Config[\'%s\']', $name));
 		//Check data is stored
 		if (isset($this->data[$name])) {
 			//Return the data
@@ -74,9 +56,8 @@ class Config
 	 * @param  string $name The name of the item to check.
 	 * @return mixed        The item of data if it is set. If it is not, FALSE.
 	 */
-	public static function inConfig($name)
+	public function inConfig($name)
 	{
-		$this->container->get('log')->info(sprintf('Looking for %s in config', $name));
 		//Check for element in config
 		if (isset($this->data[$name])) {
 			return $this->data[$name];
@@ -90,7 +71,7 @@ class Config
 	 *
 	 * @return void
 	 */
-	public static function clear()
+	public function clear()
 	{
 		$this->data = array();
 	}
@@ -102,10 +83,8 @@ class Config
 	 * @param  array  $args   An array of the arguments that were passed to the function.
 	 * @return mixed          The item in config or void.
 	 */
-	public static function __callStatic($method, $args)
+	public function __call($method, $args)
 	{
-		$this->container->get('log')->notice(sprintf('Config function called: %s', $method));
-
 		//Calculate the key
 		$name = preg_replace("/^(get|set)/", '', $method);
 		$key = '';
@@ -137,7 +116,7 @@ class Config
 		throw new ConfigException('Invalid function called.');
 	}
 
-	// Non-static functions
+	// Non functions
 
 	/**
 	 * Returns the value of the data array.

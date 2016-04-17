@@ -109,6 +109,41 @@ class Log
 	}
 
 	/**
+	 * Formats the log message so that the output is valid.
+	 *
+	 * @param  int    $cat The category of the message
+	 * @param  string $msg The message to be written to the file
+	 * @return string      The log message to be output
+	 */
+	private function composeLog($cat, $msg)
+	{
+		//Format message
+		if (is_bool($msg) && $msg === true) {
+			$msg = 'true';
+		} elseif (is_bool($msg) && $msg === false) {
+			$msg = 'false';
+		} elseif ($msg === null) {
+			$msg = 'null';
+		}
+
+		if ($cat !== self::CUSTOM) {
+			$message = sprintf(
+				'%s [IP: %s] %s - %s%s',
+				date('d\/m\/Y H:i:s'),
+				$this->getRemoteIp(),
+				$this->getCategory($cat),
+				$msg,
+				PHP_EOL
+			);
+		} else {
+			$message = sprintf('%s%s', $msg, PHP_EOL);
+		}
+
+		//Return the formatted message
+		return $message;
+	}
+
+	/**
 	 * This function is used to write the the relevant log file. The category of the
 	 * message and the message is passed to the function. Nothign is returned.
 	 *
@@ -120,28 +155,7 @@ class Log
 	{
 		//Check the log level
 		if ($cat <= $this->level) {
-			//Format message
-			if (is_bool($msg) && $msg === true) {
-				$msg = 'true';
-			} elseif (is_bool($msg) && $msg === false) {
-				$msg = 'false';
-			} elseif ($msg === null) {
-				$msg = 'null';
-			}
-
-			if ($cat !== self::CUSTOM) {
-				$message = sprintf(
-					'%s [IP: %s] %s - %s%s',
-					date('d\/m\/Y H:i:s'),
-					$this->getRemoteIp(),
-					$log->getCategory($cat),
-					$msg,
-					PHP_EOL
-				);
-			} else {
-				$message = sprintf('%s%s', $msg, PHP_EOL);
-			}
-			fwrite($this->file, $message);
+			fwrite($this->file, $this->composeLog($cat, $msg));
 		}
 	}
 
