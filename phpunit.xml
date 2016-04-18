@@ -7,17 +7,26 @@
 	</testsuites>
 
 	<filter>
+		<whitelist processUncoveredFilesFromWhitelist="true">
+			<file>./src/Config.php</file>
+			<file>./src/Json.php</file>
+			<file>./src/Log.php</file>
+			<file>./src/Validation.php</file>
+			<file>./src/Exceptions/ConfigException.php</file>
+			<file>./src/Exceptions/ExceptionAbstract.php</file>
+			<file>./src/Exceptions/JsonException.php</file>
+			<file>./src/Exceptions/LogException.php</file>
+		</whitelist>
 		<blacklist>
 			<directory>./vendor/</directory>
 			<directory>./tests/</directory>
+			<file>./src/ContainerAbstract.php</file>
+			<file>./src/Exceptions/ContainerException.php</file>
 		</blacklist>
-		<whitelist processUncoveredFilesFromWhitelist="true">
-			<directory suffix=".php">./src/</directory>
-		</whitelist>
 	</filter>
 
 	<logging>
-		<log type="coverage-html" target="./tests/reports/coverage" lowUpperBound="35" highLowerBound="70"/>
+		<log type="coverage-html" target="./tests/reports/coverage" lowUpperBound="60" highLowerBound="95"/>
 		<log type="coverage-clover" target="./tests/reports/coverage.xml"/>
 		<log type="coverage-php" target="./tests/reports/coverage.serialized"/>
 		<log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
