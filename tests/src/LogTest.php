@@ -121,7 +121,14 @@ class LogTest extends \PHPUnit_Framework_TestCase
 		$log->reset();
 
 		//Init with directory and filename
-		$instance = $log->init('tests/fixtures/logs/', 'utils.log');
+		$instance = $log->init('tests/fixtures/logs/', 'test.log');
+		//Check the file is created
+		$this->assertFileExists('tests/fixtures/logs/test.log');
+		//Reset the log
+		$log->reset();
+
+		//Init with directory with no slash
+		$log->init('tests/fixtures/logs', 'utils.log', 'success');
 		//Check the file is created
 		$this->assertFileExists('tests/fixtures/logs/utils.log');
 		return $log;
@@ -310,7 +317,6 @@ class LogTest extends \PHPUnit_Framework_TestCase
 
 		//Perfomrm the action
 		$log = new Log;
-		$log->init();
 		$this->invokeMethod($log, 'createFile', array('directory' => $directory, 'file' => $file));
 	}
 
@@ -329,7 +335,6 @@ class LogTest extends \PHPUnit_Framework_TestCase
 		$this->setExpectedException('N8G\Utils\Exceptions\LogException', 'The directory (./tests/fixtures/logs/) is not writeable.');
 
 		$log = new Log;
-		$log->init();
 		$this->invokeMethod($log, 'createFile', array('directory' => './tests/fixtures/logs/', 'file' => 'fail.log'));
 	}
 
@@ -372,6 +377,46 @@ class LogTest extends \PHPUnit_Framework_TestCase
 		//Invalid
 		$this->setExpectedException('N8G\Utils\Exceptions\LogException', 'An undefined category specified: 7');
 		$this->invokeMethod($log, 'getCategory', array('cat' => 7));
+	}
+
+	/**
+	 * Tests that the log level functionality works.
+	 *
+	 * @test
+	 * @dataProvider logLevelProvider
+	 *
+	 * @return void
+	 */
+	public function testLogLevels($level, $equal, $pass, $fail)
+	{
+		//Initilise
+		$log = new Log;
+		$log->init('tests/fixtures/logs/', 'test.log', $level);
+
+		//Equal
+		$log->$equal('This is a test.');
+		$this->assertRegExp(
+			sprintf(
+				"/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*%s.*\- This is a test.*?/",
+				$this->getCat($equal)
+			),
+			file_get_contents('./tests/fixtures/logs/test.log')
+		);
+
+		//Pass
+		$log->$pass('This is a test.');
+		$this->assertRegExp(
+			sprintf(
+				"/.*?\d{2}\/\d{2}\/\d{4} \d{2}\:\d{2}\:\d{2} \[IP\: (?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}.*|\s{15})?\].*%s.*\- This is a test.*?/",
+				$this->getCat($pass)
+			),
+			file_get_contents('./tests/fixtures/logs/test.log')
+		);
+
+		//Fail
+
+		//Remove the file
+		unlink('tests/fixtures/logs/test.log');
 	}
 
 	// Data providers
@@ -419,6 +464,36 @@ class LogTest extends \PHPUnit_Framework_TestCase
 		);
 	}
 
+	public function logLevelProvider()
+	{
+		return array(
+			array(
+				'level' => 'debug',
+				'equal' => 'debug',
+				'pass' => 'error',
+				'fail' => 'success'
+			),
+			array(
+				'level' => 'INFO',
+				'equal' => 'info',
+				'pass' => 'fatal',
+				'fail' => 'debug'
+			),
+			array(
+				'level' => 'NoTicE',
+				'equal' => 'notice',
+				'pass' => 'fatal',
+				'fail' => 'info'
+			),
+			array(
+				'level' => 2,
+				'equal' => 'warn',
+				'pass' => 'error',
+				'fail' => 'notice'
+			)
+		);
+	}
+
 	// Private Helpers
 
 	/**
@@ -436,6 +511,25 @@ class LogTest extends \PHPUnit_Framework_TestCase
 		$method->setAccessible(true);
 
 		return $method->invokeArgs($object, $params);
+	}
+
+	/**
+	 * Gets the category string for the log function.
+	 *
+	 * @param  string $function The function of the log file
+	 * @return string           The log string category.
+	 */
+	private function getCat($function)
+	{
+		switch ($function) {
+			case 'warn':
+				$string = 'warning';
+				break;
+
+			default:
+				$string = $function;
+		}
+		return trim(strtoupper($string));
 	}
 }
 

@@ -55,17 +55,25 @@ class Log
 	 * This function is used to initilise the log file. The directory and the file
 	 * name is passed as well as the name of the file to be set.
 	 *
-	 * @param  string $directory The folder to hold the log file
-	 * @param  string $filename  The name of the log file
-	 * @return object            The instance of this class
+	 * @param  string     $directory The folder to hold the log file
+	 * @param  string     $filename  The name of the log file
+	 * @param  int|string $level     The level that the class should log at
+	 * @return object                The instance of this class
 	 */
-	public function init($directory = 'logs/', $filename = null, $level = 6)
+	public function init($directory = 'logs/', $filename = null, $level = 'notice')
 	{
 		if (substr($directory, -1, 1) !== '/') $directory = $directory . '/';
 
 		//Check that the file has been created
 		if ($this->file === null) {
 			$this->file = $this->createFile($directory, $filename);
+		}
+
+		//Set the log level
+		if (is_int($level)) {
+			$this->level = $level;
+		} else {
+			$this->level = constant(sprintf('self::%s', trim(strtoupper($level))));
 		}
 	}
 
