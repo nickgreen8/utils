@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="tests" tests="245" assertions="341" failures="0" errors="0" time="3.033172">
+    <testsuite name="N8G\Utils\ConfigTest" file="/Users/NickGreen/workspace/code/utils/tests/src/ConfigTest.php" tests="47" assertions="95" failures="0" errors="0" time="0.772708">
+      <testsuite name="N8G\Utils\ConfigTest::testSetItem" tests="5" assertions="15" failures="0" errors="0" time="0.249018">
+        <testcase name="testSetItem with data set #0" assertions="3" time="0.202508"/>
+        <testcase name="testSetItem with data set #1" assertions="3" time="0.012111"/>
+        <testcase name="testSetItem with data set #2" assertions="3" time="0.011080"/>
+        <testcase name="testSetItem with data set #3" assertions="3" time="0.012198"/>
+        <testcase name="testSetItem with data set #4" assertions="3" time="0.011121"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\ConfigTest::testGetItem" tests="5" assertions="5" failures="0" errors="0" time="0.059924">
+        <testcase name="testGetItem with data set #0" assertions="1" time="0.017624"/>
+        <testcase name="testGetItem with data set #1" assertions="1" time="0.010166"/>
+        <testcase name="testGetItem with data set #2" assertions="1" time="0.011464"/>
+        <testcase name="testGetItem with data set #3" assertions="1" time="0.009879"/>
+        <testcase name="testGetItem with data set #4" assertions="1" time="0.010791"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\ConfigTest::testInConfig" tests="5" assertions="10" failures="0" errors="0" time="0.080406">
+        <testcase name="testInConfig with data set #0" assertions="2" time="0.031549"/>
+        <testcase name="testInConfig with data set #1" assertions="2" time="0.010981"/>
+        <testcase name="testInConfig with data set #2" assertions="2" time="0.013147"/>
+        <testcase name="testInConfig with data set #3" assertions="2" time="0.012350"/>
+        <testcase name="testInConfig with data set #4" assertions="2" time="0.012379"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\ConfigTest::testGenericSetter" tests="5" assertions="15" failures="0" errors="0" time="0.063400">
+        <testcase name="testGenericSetter with data set #0" assertions="3" time="0.013238"/>
+        <testcase name="testGenericSetter with data set #1" assertions="3" time="0.011631"/>
+        <testcase name="testGenericSetter with data set #2" assertions="3" time="0.012447"/>
+        <testcase name="testGenericSetter with data set #3" assertions="3" time="0.013477"/>
+        <testcase name="testGenericSetter with data set #4" assertions="3" time="0.012607"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\ConfigTest::testGenericGetter" tests="5" assertions="5" failures="0" errors="0" time="0.055944">
+        <testcase name="testGenericGetter with data set #0" assertions="1" time="0.010756"/>
+        <testcase name="testGenericGetter with data set #1" assertions="1" time="0.010390"/>
+        <testcase name="testGenericGetter with data set #2" assertions="1" time="0.012176"/>
+        <testcase name="testGenericGetter with data set #3" assertions="1" time="0.011047"/>
+        <testcase name="testGenericGetter with data set #4" assertions="1" time="0.011575"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\ConfigTest::testClear" tests="5" assertions="5" failures="0" errors="0" time="0.044997">
+        <testcase name="testClear with data set #0" assertions="1" time="0.011539"/>
+        <testcase name="testClear with data set #1" assertions="1" time="0.007540"/>
+        <testcase name="testClear with data set #2" assertions="1" time="0.008225"/>
+        <testcase name="testClear with data set #3" assertions="1" time="0.007617"/>
+        <testcase name="testClear with data set #4" assertions="1" time="0.010076"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\ConfigTest::testFailedGetter" tests="5" assertions="10" failures="0" errors="0" time="0.093149">
+        <testcase name="testFailedGetter with data set #0" assertions="2" time="0.059432"/>
+        <testcase name="testFailedGetter with data set #1" assertions="2" time="0.007927"/>
+        <testcase name="testFailedGetter with data set #2" assertions="2" time="0.009797"/>
+        <testcase name="testFailedGetter with data set #3" assertions="2" time="0.008128"/>
+        <testcase name="testFailedGetter with data set #4" assertions="2" time="0.007865"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\ConfigTest::testFailedGenericGetter" tests="5" assertions="10" failures="0" errors="0" time="0.046623">
+        <testcase name="testFailedGenericGetter with data set #0" assertions="2" time="0.010036"/>
+        <testcase name="testFailedGenericGetter with data set #1" assertions="2" time="0.008201"/>
+        <testcase name="testFailedGenericGetter with data set #2" assertions="2" time="0.008955"/>
+        <testcase name="testFailedGenericGetter with data set #3" assertions="2" time="0.010255"/>
+        <testcase name="testFailedGenericGetter with data set #4" assertions="2" time="0.009175"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\ConfigTest::testCallback" tests="5" assertions="10" failures="0" errors="0" time="0.044103">
+        <testcase name="testCallback with data set #0" assertions="2" time="0.008106"/>
+        <testcase name="testCallback with data set #1" assertions="2" time="0.009673"/>
+        <testcase name="testCallback with data set #2" assertions="2" time="0.008061"/>
+        <testcase name="testCallback with data set #3" assertions="2" time="0.008030"/>
+        <testcase name="testCallback with data set #4" assertions="2" time="0.010233"/>
+      </testsuite>
+      <testcase name="testGetData" class="N8G\Utils\ConfigTest" file="/Users/NickGreen/workspace/code/utils/tests/src/ConfigTest.php" line="224" assertions="7" time="0.015837"/>
+      <testcase name="testSize" class="N8G\Utils\ConfigTest" file="/Users/NickGreen/workspace/code/utils/tests/src/ConfigTest.php" line="252" assertions="3" time="0.019307"/>
+    </testsuite>
+    <testsuite name="N8G\Utils\Exceptions\ExceptionTest" file="/Users/NickGreen/workspace/code/utils/tests/src/ExceptionTest.php" tests="6" assertions="18" failures="0" errors="0" time="0.129577">
+      <testcase name="testDefaultConfigException" class="N8G\Utils\Exceptions\ExceptionTest" file="/Users/NickGreen/workspace/code/utils/tests/src/ExceptionTest.php" line="20" assertions="3" time="0.050590"/>
+      <testcase name="testOverwrittenCodeConfigException" class="N8G\Utils\Exceptions\ExceptionTest" file="/Users/NickGreen/workspace/code/utils/tests/src/ExceptionTest.php" line="26" assertions="3" time="0.009088"/>
+      <testcase name="testDefaultJsonException" class="N8G\Utils\Exceptions\ExceptionTest" file="/Users/NickGreen/workspace/code/utils/tests/src/ExceptionTest.php" line="32" assertions="3" time="0.023872"/>
+      <testcase name="testOverwrittenCodeJsonException" class="N8G\Utils\Exceptions\ExceptionTest" file="/Users/NickGreen/workspace/code/utils/tests/src/ExceptionTest.php" line="38" assertions="3" time="0.009728"/>
+      <testcase name="testDefaultLogException" class="N8G\Utils\Exceptions\ExceptionTest" file="/Users/NickGreen/workspace/code/utils/tests/src/ExceptionTest.php" line="44" assertions="3" time="0.028159"/>
+      <testcase name="testOverwrittenCodeLogException" class="N8G\Utils\Exceptions\ExceptionTest" file="/Users/NickGreen/workspace/code/utils/tests/src/ExceptionTest.php" line="50" assertions="3" time="0.008140"/>
+    </testsuite>
+    <testsuite name="N8G\Utils\JsonTest" file="/Users/NickGreen/workspace/code/utils/tests/src/JsonTest.php" tests="31" assertions="45" failures="0" errors="0" time="0.357728">
+      <testsuite name="N8G\Utils\JsonTest::testFileExists" tests="4" assertions="4" failures="0" errors="0" time="0.065447">
+        <testcase name="testFileExists with data set #0" assertions="1" time="0.033444"/>
+        <testcase name="testFileExists with data set #1" assertions="1" time="0.009979"/>
+        <testcase name="testFileExists with data set #2" assertions="1" time="0.012009"/>
+        <testcase name="testFileExists with data set #3" assertions="1" time="0.010015"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\JsonTest::testReadFile" tests="6" assertions="11" failures="0" errors="0" time="0.073848">
+        <testcase name="testReadFile with data set #0" assertions="2" time="0.028388"/>
+        <testcase name="testReadFile with data set #1" assertions="1" time="0.008410"/>
+        <testcase name="testReadFile with data set #2" assertions="2" time="0.008481"/>
+        <testcase name="testReadFile with data set #3" assertions="2" time="0.009912"/>
+        <testcase name="testReadFile with data set #4" assertions="2" time="0.008025"/>
+        <testcase name="testReadFile with data set #5" assertions="2" time="0.010632"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\JsonTest::testWriteToFile" tests="8" assertions="16" failures="0" errors="0" time="0.073477">
+        <testcase name="testWriteToFile with data set #0" assertions="2" time="0.010921"/>
+        <testcase name="testWriteToFile with data set #1" assertions="2" time="0.008869"/>
+        <testcase name="testWriteToFile with data set #2" assertions="2" time="0.008265"/>
+        <testcase name="testWriteToFile with data set #3" assertions="2" time="0.009648"/>
+        <testcase name="testWriteToFile with data set #4" assertions="2" time="0.009702"/>
+        <testcase name="testWriteToFile with data set #5" assertions="2" time="0.009900"/>
+        <testcase name="testWriteToFile with data set #6" assertions="2" time="0.008148"/>
+        <testcase name="testWriteToFile with data set #7" assertions="2" time="0.008024"/>
+      </testsuite>
+      <testcase name="testWriteToFileWithObject" class="N8G\Utils\JsonTest" file="/Users/NickGreen/workspace/code/utils/tests/src/JsonTest.php" line="185" assertions="2" time="0.011169"/>
+      <testsuite name="N8G\Utils\JsonTest::testValidateJson" tests="12" assertions="12" failures="0" errors="0" time="0.133788">
+        <testcase name="testValidateJson with data set #0" assertions="1" time="0.010169"/>
+        <testcase name="testValidateJson with data set #1" assertions="1" time="0.009892"/>
+        <testcase name="testValidateJson with data set #2" assertions="1" time="0.012019"/>
+        <testcase name="testValidateJson with data set #3" assertions="1" time="0.011298"/>
+        <testcase name="testValidateJson with data set #4" assertions="1" time="0.011171"/>
+        <testcase name="testValidateJson with data set #5" assertions="1" time="0.012765"/>
+        <testcase name="testValidateJson with data set #6" assertions="1" time="0.010106"/>
+        <testcase name="testValidateJson with data set #7" assertions="1" time="0.010789"/>
+        <testcase name="testValidateJson with data set #8" assertions="1" time="0.011980"/>
+        <testcase name="testValidateJson with data set #9" assertions="1" time="0.011350"/>
+        <testcase name="testValidateJson with data set #10" assertions="1" time="0.009953"/>
+        <testcase name="testValidateJson with data set #11" assertions="1" time="0.012297"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="N8G\Utils\LogTest" file="/Users/NickGreen/workspace/code/utils/tests/src/LogTest.php" tests="67" assertions="89" failures="0" errors="0" time="0.685293">
+      <testcase name="testInit" class="N8G\Utils\LogTest" file="/Users/NickGreen/workspace/code/utils/tests/src/LogTest.php" line="88" assertions="7" time="0.036419"/>
+      <testsuite name="N8G\Utils\LogTest::testFatal" tests="7" assertions="7" failures="0" errors="0" time="0.068789">
+        <testcase name="testFatal with data set #0" assertions="1" time="0.014487"/>
+        <testcase name="testFatal with data set #1" assertions="1" time="0.007953"/>
+        <testcase name="testFatal with data set #2" assertions="1" time="0.007878"/>
+        <testcase name="testFatal with data set #3" assertions="1" time="0.009134"/>
+        <testcase name="testFatal with data set #4" assertions="1" time="0.009328"/>
+        <testcase name="testFatal with data set #5" assertions="1" time="0.010402"/>
+        <testcase name="testFatal with data set #6" assertions="1" time="0.009607"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\LogTest::testError" tests="7" assertions="7" failures="0" errors="0" time="0.061942">
+        <testcase name="testError with data set #0" assertions="1" time="0.007918"/>
+        <testcase name="testError with data set #1" assertions="1" time="0.009611"/>
+        <testcase name="testError with data set #2" assertions="1" time="0.008842"/>
+        <testcase name="testError with data set #3" assertions="1" time="0.009390"/>
+        <testcase name="testError with data set #4" assertions="1" time="0.007917"/>
+        <testcase name="testError with data set #5" assertions="1" time="0.010172"/>
+        <testcase name="testError with data set #6" assertions="1" time="0.008092"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\LogTest::testWarning" tests="7" assertions="7" failures="0" errors="0" time="0.062079">
+        <testcase name="testWarning with data set #0" assertions="1" time="0.007913"/>
+        <testcase name="testWarning with data set #1" assertions="1" time="0.008424"/>
+        <testcase name="testWarning with data set #2" assertions="1" time="0.009904"/>
+        <testcase name="testWarning with data set #3" assertions="1" time="0.008071"/>
+        <testcase name="testWarning with data set #4" assertions="1" time="0.008976"/>
+        <testcase name="testWarning with data set #5" assertions="1" time="0.009824"/>
+        <testcase name="testWarning with data set #6" assertions="1" time="0.008967"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\LogTest::testNotice" tests="7" assertions="7" failures="0" errors="0" time="0.063556">
+        <testcase name="testNotice with data set #0" assertions="1" time="0.010115"/>
+        <testcase name="testNotice with data set #1" assertions="1" time="0.008977"/>
+        <testcase name="testNotice with data set #2" assertions="1" time="0.007979"/>
+        <testcase name="testNotice with data set #3" assertions="1" time="0.009185"/>
+        <testcase name="testNotice with data set #4" assertions="1" time="0.007887"/>
+        <testcase name="testNotice with data set #5" assertions="1" time="0.009301"/>
+        <testcase name="testNotice with data set #6" assertions="1" time="0.010112"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\LogTest::testInfo" tests="7" assertions="7" failures="0" errors="0" time="0.065663">
+        <testcase name="testInfo with data set #0" assertions="1" time="0.008973"/>
+        <testcase name="testInfo with data set #1" assertions="1" time="0.008004"/>
+        <testcase name="testInfo with data set #2" assertions="1" time="0.009901"/>
+        <testcase name="testInfo with data set #3" assertions="1" time="0.009967"/>
+        <testcase name="testInfo with data set #4" assertions="1" time="0.011091"/>
+        <testcase name="testInfo with data set #5" assertions="1" time="0.008287"/>
+        <testcase name="testInfo with data set #6" assertions="1" time="0.009440"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\LogTest::testDebug" tests="7" assertions="7" failures="0" errors="0" time="0.063676">
+        <testcase name="testDebug with data set #0" assertions="1" time="0.009910"/>
+        <testcase name="testDebug with data set #1" assertions="1" time="0.010864"/>
+        <testcase name="testDebug with data set #2" assertions="1" time="0.008163"/>
+        <testcase name="testDebug with data set #3" assertions="1" time="0.009123"/>
+        <testcase name="testDebug with data set #4" assertions="1" time="0.009576"/>
+        <testcase name="testDebug with data set #5" assertions="1" time="0.008032"/>
+        <testcase name="testDebug with data set #6" assertions="1" time="0.008008"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\LogTest::testSuccess" tests="7" assertions="7" failures="0" errors="0" time="0.066646">
+        <testcase name="testSuccess with data set #0" assertions="1" time="0.009059"/>
+        <testcase name="testSuccess with data set #1" assertions="1" time="0.009179"/>
+        <testcase name="testSuccess with data set #2" assertions="1" time="0.010988"/>
+        <testcase name="testSuccess with data set #3" assertions="1" time="0.009321"/>
+        <testcase name="testSuccess with data set #4" assertions="1" time="0.010822"/>
+        <testcase name="testSuccess with data set #5" assertions="1" time="0.009266"/>
+        <testcase name="testSuccess with data set #6" assertions="1" time="0.008011"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\LogTest::testCustom" tests="7" assertions="7" failures="0" errors="0" time="0.057448">
+        <testcase name="testCustom with data set #0" assertions="1" time="0.007888"/>
+        <testcase name="testCustom with data set #1" assertions="1" time="0.007636"/>
+        <testcase name="testCustom with data set #2" assertions="1" time="0.007680"/>
+        <testcase name="testCustom with data set #3" assertions="1" time="0.008127"/>
+        <testcase name="testCustom with data set #4" assertions="1" time="0.010650"/>
+        <testcase name="testCustom with data set #5" assertions="1" time="0.007680"/>
+        <testcase name="testCustom with data set #6" assertions="1" time="0.007787"/>
+      </testsuite>
+      <testcase name="testReset" class="N8G\Utils\LogTest" file="/Users/NickGreen/workspace/code/utils/tests/src/LogTest.php" line="264" assertions="1" time="0.025133"/>
+      <testcase name="testGetFile" class="N8G\Utils\LogTest" file="/Users/NickGreen/workspace/code/utils/tests/src/LogTest.php" line="281" assertions="2" time="0.010748"/>
+      <testsuite name="N8G\Utils\LogTest::testCreateFileFails" tests="2" assertions="4" failures="0" errors="0" time="0.019609">
+        <testcase name="testCreateFileFails with data set #0" assertions="2" time="0.010316"/>
+        <testcase name="testCreateFileFails with data set #1" assertions="2" time="0.009293"/>
+      </testsuite>
+      <testcase name="testWriteToFile" class="N8G\Utils\LogTest" file="/Users/NickGreen/workspace/code/utils/tests/src/LogTest.php" line="330" assertions="2" time="0.009544"/>
+      <testcase name="testGetCategory" class="N8G\Utils\LogTest" file="/Users/NickGreen/workspace/code/utils/tests/src/LogTest.php" line="350" assertions="9" time="0.029090"/>
+      <testsuite name="N8G\Utils\LogTest::testLogLevels" tests="4" assertions="8" failures="0" errors="0" time="0.044950">
+        <testcase name="testLogLevels with data set #0" assertions="2" time="0.012525"/>
+        <testcase name="testLogLevels with data set #1" assertions="2" time="0.010781"/>
+        <testcase name="testLogLevels with data set #2" assertions="2" time="0.010560"/>
+        <testcase name="testLogLevels with data set #3" assertions="2" time="0.011084"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="N8G\Utils\ValidationTest" file="/Users/NickGreen/workspace/code/utils/tests/src/ValidationTest.php" tests="94" assertions="94" failures="0" errors="0" time="1.087865">
+      <testsuite name="N8G\Utils\ValidationTest::testEmail" tests="10" assertions="10" failures="0" errors="0" time="0.134403">
+        <testcase name="testEmail with data set #0" assertions="1" time="0.027051"/>
+        <testcase name="testEmail with data set #1" assertions="1" time="0.012259"/>
+        <testcase name="testEmail with data set #2" assertions="1" time="0.012422"/>
+        <testcase name="testEmail with data set #3" assertions="1" time="0.010050"/>
+        <testcase name="testEmail with data set #4" assertions="1" time="0.012083"/>
+        <testcase name="testEmail with data set #5" assertions="1" time="0.012805"/>
+        <testcase name="testEmail with data set #6" assertions="1" time="0.011467"/>
+        <testcase name="testEmail with data set #7" assertions="1" time="0.011656"/>
+        <testcase name="testEmail with data set #8" assertions="1" time="0.012180"/>
+        <testcase name="testEmail with data set #9" assertions="1" time="0.012430"/>
+      </testsuite>
+      <testsuite name="N8G\Utils\ValidationTest::testDate" tests="84" assertions="84" failures="0" errors="0" time="0.953462">
+        <testcase name="testDate with data set #0" assertions="1" time="0.012483"/>
+        <testcase name="testDate with data set #1" assertions="1" time="0.011667"/>
+        <testcase name="testDate with data set #2" assertions="1" time="0.012951"/>
+        <testcase name="testDate with data set #3" assertions="1" time="0.011483"/>
+        <testcase name="testDate with data set #4" assertions="1" time="0.012388"/>
+        <testcase name="testDate with data set #5" assertions="1" time="0.009998"/>
+        <testcase name="testDate with data set #6" assertions="1" time="0.012005"/>
+        <testcase name="testDate with data set #7" assertions="1" time="0.011347"/>
+        <testcase name="testDate with data set #8" assertions="1" time="0.012345"/>
+        <testcase name="testDate with data set #9" assertions="1" time="0.011258"/>
+        <testcase name="testDate with data set #10" assertions="1" time="0.011049"/>
+        <testcase name="testDate with data set #11" assertions="1" time="0.010170"/>
+        <testcase name="testDate with data set #12" assertions="1" time="0.011302"/>
+        <testcase name="testDate with data set #13" assertions="1" time="0.011407"/>
+        <testcase name="testDate with data set #14" assertions="1" time="0.009972"/>
+        <testcase name="testDate with data set #15" assertions="1" time="0.011687"/>
+        <testcase name="testDate with data set #16" assertions="1" time="0.010187"/>
+        <testcase name="testDate with data set #17" assertions="1" time="0.010150"/>
+        <testcase name="testDate with data set #18" assertions="1" time="0.009929"/>
+        <testcase name="testDate with data set #19" assertions="1" time="0.013330"/>
+        <testcase name="testDate with data set #20" assertions="1" time="0.010129"/>
+        <testcase name="testDate with data set #21" assertions="1" time="0.012624"/>
+        <testcase name="testDate with data set #22" assertions="1" time="0.011904"/>
+        <testcase name="testDate with data set #23" assertions="1" time="0.009974"/>
+        <testcase name="testDate with data set #24" assertions="1" time="0.013055"/>
+        <testcase name="testDate with data set #25" assertions="1" time="0.010044"/>
+        <testcase name="testDate with data set #26" assertions="1" time="0.011498"/>
+        <testcase name="testDate with data set #27" assertions="1" time="0.013094"/>
+        <testcase name="testDate with data set #28" assertions="1" time="0.012131"/>
+        <testcase name="testDate with data set #29" assertions="1" time="0.010946"/>
+        <testcase name="testDate with data set #30" assertions="1" time="0.014474"/>
+        <testcase name="testDate with data set #31" assertions="1" time="0.012035"/>
+        <testcase name="testDate with data set #32" assertions="1" time="0.012256"/>
+        <testcase name="testDate with data set #33" assertions="1" time="0.011997"/>
+        <testcase name="testDate with data set #34" assertions="1" time="0.011382"/>
+        <testcase name="testDate with data set #35" assertions="1" time="0.010327"/>
+        <testcase name="testDate with data set #36" assertions="1" time="0.009965"/>
+        <testcase name="testDate with data set #37" assertions="1" time="0.011283"/>
+        <testcase name="testDate with data set #38" assertions="1" time="0.011038"/>
+        <testcase name="testDate with data set #39" assertions="1" time="0.010180"/>
+        <testcase name="testDate with data set #40" assertions="1" time="0.010529"/>
+        <testcase name="testDate with data set #41" assertions="1" time="0.009987"/>
+        <testcase name="testDate with data set #42" assertions="1" time="0.012623"/>
+        <testcase name="testDate with data set #43" assertions="1" time="0.014055"/>
+        <testcase name="testDate with data set #44" assertions="1" time="0.011836"/>
+        <testcase name="testDate with data set #45" assertions="1" time="0.011575"/>
+        <testcase name="testDate with data set #46" assertions="1" time="0.012502"/>
+        <testcase name="testDate with data set #47" assertions="1" time="0.010061"/>
+        <testcase name="testDate with data set #48" assertions="1" time="0.010559"/>
+        <testcase name="testDate with data set #49" assertions="1" time="0.011654"/>
+        <testcase name="testDate with data set #50" assertions="1" time="0.011183"/>
+        <testcase name="testDate with data set #51" assertions="1" time="0.011805"/>
+        <testcase name="testDate with data set #52" assertions="1" time="0.013381"/>
+        <testcase name="testDate with data set #53" assertions="1" time="0.011416"/>
+        <testcase name="testDate with data set #54" assertions="1" time="0.011448"/>
+        <testcase name="testDate with data set #55" assertions="1" time="0.010468"/>
+        <testcase name="testDate with data set #56" assertions="1" time="0.010978"/>
+        <testcase name="testDate with data set #57" assertions="1" time="0.010034"/>
+        <testcase name="testDate with data set #58" assertions="1" time="0.012602"/>
+        <testcase name="testDate with data set #59" assertions="1" time="0.011617"/>
+        <testcase name="testDate with data set #60" assertions="1" time="0.010644"/>
+        <testcase name="testDate with data set #61" assertions="1" time="0.010181"/>
+        <testcase name="testDate with data set #62" assertions="1" time="0.012884"/>
+        <testcase name="testDate with data set #63" assertions="1" time="0.010707"/>
+        <testcase name="testDate with data set #64" assertions="1" time="0.010931"/>
+        <testcase name="testDate with data set #65" assertions="1" time="0.012437"/>
+        <testcase name="testDate with data set #66" assertions="1" time="0.011297"/>
+        <testcase name="testDate with data set #67" assertions="1" time="0.011924"/>
+        <testcase name="testDate with data set #68" assertions="1" time="0.010720"/>
+        <testcase name="testDate with data set #69" assertions="1" time="0.011042"/>
+        <testcase name="testDate with data set #70" assertions="1" time="0.012289"/>
+        <testcase name="testDate with data set #71" assertions="1" time="0.010392"/>
+        <testcase name="testDate with data set #72" assertions="1" time="0.011344"/>
+        <testcase name="testDate with data set #73" assertions="1" time="0.010709"/>
+        <testcase name="testDate with data set #74" assertions="1" time="0.012515"/>
+        <testcase name="testDate with data set #75" assertions="1" time="0.010335"/>
+        <testcase name="testDate with data set #76" assertions="1" time="0.009976"/>
+        <testcase name="testDate with data set #77" assertions="1" time="0.010356"/>
+        <testcase name="testDate with data set #78" assertions="1" time="0.011357"/>
+        <testcase name="testDate with data set #79" assertions="1" time="0.010750"/>
+        <testcase name="testDate with data set #80" assertions="1" time="0.011054"/>
+        <testcase name="testDate with data set #81" assertions="1" time="0.010063"/>
+        <testcase name="testDate with data set #82" assertions="1" time="0.010097"/>
+        <testcase name="testDate with data set #83" assertions="1" time="0.011703"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

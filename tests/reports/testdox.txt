@@ -1,0 +1,49 @@
+N8G\Utils\Config
+ [x] Set item
+ [x] Get item
+ [x] In config
+ [x] Generic setter
+ [x] Generic getter
+ [x] Clear
+ [x] Failed getter
+ [x] Failed generic getter
+ [x] Callback
+ [x] Get data
+ [x] Size
+
+N8G\Utils\Exceptions\Exception
+ [x] Default config exception
+ [x] Overwritten code config exception
+ [x] Default json exception
+ [x] Overwritten code json exception
+ [x] Default log exception
+ [x] Overwritten code log exception
+
+N8G\Utils\Json
+ [x] File exists
+ [x] Read file
+ [x] Write to file
+ [x] Write to file with object
+ [x] Validate json
+
+N8G\Utils\Log
+ [x] Init
+ [x] Fatal
+ [x] Error
+ [x] Warning
+ [x] Notice
+ [x] Info
+ [x] Debug
+ [x] Success
+ [x] Custom
+ [x] Reset
+ [x] Get file
+ [x] Create file fails
+ [x] Write to file
+ [x] Get category
+ [x] Log levels
+
+N8G\Utils\Validation
+ [x] Email
+ [x] Date
+
