@@ -5,7 +5,7 @@
 	"authors": [
 		{
 			"name": "Nick Green",
-			"email": "nick@nickgreenweb.co.uk"
+			"email": "nick-green@live.co.uk"
 		}
 	],
 	"minimum-stability": "dev",
@@ -13,7 +13,8 @@
 		"php": ">=5.4.0"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "4.4.*"
+		"phpunit/phpunit": "4.4.*",
+		"phpdocumentor/phpdocumentor": "2.*"
 	},
 	"autoload": {
 		"psr-4": {
