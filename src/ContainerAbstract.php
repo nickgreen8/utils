@@ -35,7 +35,7 @@ abstract class ContainerAbstract
      */
     public function get($key)
     {
-        if (in_array($key, $this->elements)) {
+        if (in_array($key, array_keys($this->elements))) {
             return $this->elements[$key];
         }
         throw new ContainerException(sprintf('Element (%s) could not be found.', $key));
