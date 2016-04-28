@@ -22,9 +22,10 @@ abstract class ContainerAbstract
      * Abstract method that must be created within the application itself. This is where all the key elements will be
      * created and added to the container on initialisation.
      *
+     * @param  array|object $config Any config that needs to be passed to create anything.
      * @return void
      */
-    public abstract function populate();
+    public abstract function populate($config = null);
 
     /**
      * Gets an element from the container. The key of the element must be passed so that it can be successfully
