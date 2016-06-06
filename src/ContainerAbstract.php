@@ -54,4 +54,16 @@ abstract class ContainerAbstract
     {
         $this->elements[$key] = $element;
     }
+
+    /**
+     * Checks if an element has been set in the container with a specific key. A boolean is returned indicating whether
+     * the key has been set in the array.
+     *
+     * @param  string  $key The key to check.
+     * @return boolean      Whether the key is set in the container.
+     */
+    public function keyExists($key)
+    {
+        return array_key_exists($key, $this->elements);
+    }
 }
